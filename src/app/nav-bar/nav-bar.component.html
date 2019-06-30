@@ -1,0 +1,84 @@
+<nav class="nav has-shadow">
+  <div class="container">
+    <aside class="column is-10 is-fullheight section is-hidden-mobile">
+      <p class="menu-label is-hidden-touch">Carlos Santos</p>
+      <ul class="menu-list">
+        <li>
+          <a href="#" class="">
+            <span class="icon"><i class="fa fa-home"></i></span> About
+          </a>
+        </li>
+        <li>
+          <a [ngClass]="{'is-active': resumeSectionExpanded}" (click)="clickResumeSection($event)">
+            <span class="icon"><i class="fa fa-table"></i></span> Resume
+          </a>
+          <ul [@openClose]="resumeSectionExpanded ? 'open' : 'closed'" *ngIf="resumeSectionExpanded">
+            <li>
+              <a href="#">
+                <span class="icon is-small"><i class="fa fa-link"></i></span>
+                Skills
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small"><i class="fa fa-link"></i></span>
+                Professional experience
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small"><i class="fa fa-link"></i></span>
+                Education
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small"><i class="fa fa-link"></i></span>
+                Certifications
+              </a>
+            </li>
+            <li>
+              <a href="#">
+                <span class="icon is-small"><i class="fa fa-link"></i></span>
+                Training
+              </a>
+            </li>
+          </ul>
+        </li>
+        <li>
+          <a href="#" class="">
+            <span class="icon"><i class="fa fa-info"></i></span> Hobbies
+          </a>
+        </li>
+      </ul>
+    </aside>
+    <label for="menu-toggle" class="nav-toggle">
+      <span></span>
+      <span></span>
+      <span></span>
+    </label>
+    <input type="checkbox" id="menu-toggle" class="is-hidden" />
+    <div class="nav-right nav-menu">
+      <a class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><i class="fa fa-home"></i></span> About
+      </a>
+      <a class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><i class="fa fa-table"></i></span> Resume
+      </a>
+      <a class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><i class="fa fa-info"></i></span> About
+      </a>
+
+      <a class="nav-item is-tab is-active">
+        <span class="icon"><i class="fa fa-user"></i></span>
+      </a>
+      <a class="nav-item is-tab">
+        <span class="icon"><i class="fa fa-sign-out"></i></span>
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- <section class="main-content columns is-fullheight">
+  
+</section> -->
