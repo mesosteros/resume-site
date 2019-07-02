@@ -4,3 +4,10 @@
     display: block;
   }
 }
+
+@media screen and (min-width: 769px)
+{
+  .expandable-menu-item{
+    padding-bottom: 8px;
+  }
+}
