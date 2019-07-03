@@ -1,11 +1,11 @@
 <nav class="nav has-shadow">
   <div class="container is-unselectable">
-    <aside class="menu column is-10 is-fullheight section is-hidden-mobile">
+    <aside class="menu column is-12 is-fullheight section is-hidden-mobile">
       <a [routerLink]="['']">
-        <h1 class="menu-label is-hidden-touch is-size-4">
+        <h1 class="menu-label is-hidden-touch is-size-3">
           Carlos Santos</h1>
       </a>
-      <ul class="menu-list is-size-6">
+      <ul class="menu-list is-size-5">
         <li class="parent-items">
           <a [routerLink]="['about']" class="parent-item">
             <span class="icon">
@@ -81,12 +81,13 @@
         </li>
       </ul>
       <div class="columns is-centered social">
-        <a class="icon" href="https://www.linkedin.com/in/carlosermidasantos/">
-          <fa-icon [inverse]="true" [icon]="['fab', 'linkedin']">
+        <a class="icon first-icon"
+          href="https://www.linkedin.com/in/carlosermidasantos/">
+          <fa-icon [inverse]="true" [icon]="['fab', 'linkedin']" size="lg">
           </fa-icon>
         </a>
         <a class="icon" href="https://github.com/mesosteros">
-          <fa-icon [inverse]="true" [icon]="['fab', 'github']">
+          <fa-icon [inverse]="true" [icon]="['fab', 'github']" size="lg">
           </fa-icon>
         </a>
       </div>

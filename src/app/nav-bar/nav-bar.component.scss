@@ -18,8 +18,8 @@
 
     .menu-list{
       li{
-        min-width: 230px;
-        
+        width: 267px;
+
         a{
           color: #7a7a7a;
         }
@@ -33,23 +33,24 @@
           
           .longer-child-item{
             margin-right: -25%;
+            max-width: 267px;
           }
         }
       }
       li.parent-items{
-        margin-left: 6%;
-
         .parent-item {
-          margin-left: 20%;
-          margin-right: 20%;
+          margin-left: 5%;
         }
       }
     }
     .social{
-      margin-top: 5px;
+      margin-top: 20px;
       
-      a.icon:hover{
+      a.icon:hover {
           background-color: transparent;
+      }
+      .first-icon {
+          margin-right: 10px;
       }
     }
   }
