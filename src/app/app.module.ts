@@ -5,7 +5,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
 // tslint:disable-next-line:max-line-length
-import { faBusinessTime, faCaretDown, faCaretUp, faLaptopCode, faUserCircle, faUserGraduate, faWrench } from '@fortawesome/pro-regular-svg-icons';
+import { faBusinessTime, faCaretDown, faCaretUp, faFileUser, faLaptopCode, faUserCircle, faUserGraduate, faWrench } from '@fortawesome/pro-regular-svg-icons';
 import { faDiceD20, faFileCertificate } from '@fortawesome/pro-light-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
@@ -46,6 +46,7 @@ export class AppModule {
     library.add(faBusinessTime);
     library.add(faCaretDown);
     library.add(faCaretUp);
+    library.add(faFileUser);
     library.add(faLaptopCode);
     library.add(faUserCircle);
     library.add(faUserGraduate);

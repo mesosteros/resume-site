@@ -3,24 +3,27 @@
     <aside class="menu column is-10 is-fullheight section is-hidden-mobile">
       <h1 class="menu-label is-hidden-touch is-size-4">Carlos Santos</h1>
       <ul class="menu-list is-size-6">
-        <li>
-          <a href="#" class="">
+        <li class="parent-items">
+          <a href="#" class="parent-item">
             <span class="icon">
               <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
             </span> About
           </a>
         </li>
-        <li>
-          <a class="expandable-menu-item"
+        <li class="parent-items">
+          <a class="expandable-menu-item parent-item"
             [ngClass]="{'is-active': resumeSectionExpanded}"
             (click)="clickResumeSection($event)">
+            <span class="icon">
+              <fa-icon [icon]="['far', 'file-user']"></fa-icon>
+            </span>
+            Resume
             <span class="icon">
               <fa-icon [icon]="['far', 'caret-down']"
                 *ngIf="!resumeSectionExpanded"></fa-icon>
               <fa-icon [icon]="['far', 'caret-up']"
                 *ngIf="resumeSectionExpanded"></fa-icon>
             </span>
-            Resume
           </a>
           <ul [@openClose]="resumeSectionExpanded ? 'open' : 'closed'"
             *ngIf="resumeSectionExpanded">
@@ -32,7 +35,7 @@
                 Skills
               </a>
             </li>
-            <li>
+            <li class="longer-child-item">
               <a href="#">
                 <span class="icon">
                   <fa-icon [icon]="['far', 'business-time']"></fa-icon>
@@ -66,8 +69,8 @@
             </li>
           </ul>
         </li>
-        <li>
-          <a href="#" class="">
+        <li class="parent-items">
+          <a href="#" class="parent-item">
             <span class="icon">
               <fa-icon [icon]="['fal', 'dice-d20']"></fa-icon>
             </span> Hobbies
