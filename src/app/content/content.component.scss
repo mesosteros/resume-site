@@ -1,3 +1,13 @@
-.hero.is-fullheight{
-    height: 101vh;
+@media screen and (max-width: 768px)
+{
+    .hero.is-fullheight{
+        max-height: 90vh !important;
+    }
+}
+
+@media screen and (min-width: 769px)
+{
+    .hero.is-fullheight{
+        height: 101vh;
+    }
 }
