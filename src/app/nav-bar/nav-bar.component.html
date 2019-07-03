@@ -1,10 +1,13 @@
 <nav class="nav has-shadow">
   <div class="container is-unselectable">
     <aside class="menu column is-10 is-fullheight section is-hidden-mobile">
-      <h1 class="menu-label is-hidden-touch is-size-4">Carlos Santos</h1>
+      <a [routerLink]="['']">
+        <h1 class="menu-label is-hidden-touch is-size-4">
+          Carlos Santos</h1>
+      </a>
       <ul class="menu-list is-size-6">
         <li class="parent-items">
-          <a href="#" class="parent-item">
+          <a [routerLink]="['about']" class="parent-item">
             <span class="icon">
               <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
             </span> About
