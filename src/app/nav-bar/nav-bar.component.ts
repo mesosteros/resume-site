@@ -8,6 +8,13 @@ import {
     group
 } from '@angular/animations';
 
+/**
+ * Nav Bar Component
+ *
+ * @export
+ * @class NavBarComponent
+ * @implements {OnInit}
+ */
 @Component({
     selector: 'app-nav-bar',
     templateUrl: './nav-bar.component.html',
@@ -34,11 +41,22 @@ import {
     ]
 })
 export class NavBarComponent implements OnInit {
-    resumeSectionExpanded = false;
+    resumeSectionExpanded: boolean;
 
+    /**
+     * Creates an instance of NavBarComponent.
+     * 
+     * @memberof NavBarComponent
+     */
     constructor() { }
 
+    /**
+     * Lifecycle hook
+     *
+     * @memberof NavBarComponent
+     */
     ngOnInit() {
+        this.resumeSectionExpanded = false;
     }
 
     /**
