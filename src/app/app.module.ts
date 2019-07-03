@@ -12,7 +12,6 @@ import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { FooterComponent } from './footer/footer.component';
 import { ContentComponent } from './content/content.component';
 
 /**
@@ -25,7 +24,6 @@ import { ContentComponent } from './content/content.component';
   declarations: [
     AppComponent,
     NavBarComponent,
-    FooterComponent,
     ContentComponent
   ],
   imports: [

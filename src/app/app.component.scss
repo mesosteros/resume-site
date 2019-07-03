@@ -1,15 +1,17 @@
 html, body, #app
 {
-  height: 100vh !important;
-  overflow: hidden !important
+  min-height: 100vh !important;
+  overflow: hidden !important;
 }
 
 #app
 {
-  min-height: 100%;
+  min-height: 100vh;
   
   .columns{
     margin-bottom: 0;
+    min-height: 101vh !important;
+    overflow: hidden !important;
   }
 }
 
