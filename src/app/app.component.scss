@@ -13,6 +13,17 @@ html, body, #app
   }
 }
 
+@media screen and (max-width: 768px)
+{
+  .right-column{
+    padding: 0;
+  }
+  
+  .left-column{
+    margin:auto;
+  }
+}
+
 @media screen and (min-width: 769px)
 {
   .left-column, .right-column{

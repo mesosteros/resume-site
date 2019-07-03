@@ -1,7 +1,15 @@
 footer, nav.footer-nav{
     height: 100%;
     
-    .container{
+    .footer-contents{
+      margin-top: 2%;
+    }
+
+    .container {
         color: #7a7a7a;
+    }
+
+    .social{
+        margin-top: 5px;
     }
 }

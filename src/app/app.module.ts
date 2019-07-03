@@ -7,6 +7,7 @@ import { library } from '@fortawesome/fontawesome-svg-core';
 // tslint:disable-next-line:max-line-length
 import { faBusinessTime, faCaretDown, faCaretUp, faLaptopCode, faUserCircle, faUserGraduate, faWrench } from '@fortawesome/pro-regular-svg-icons';
 import { faDiceD20, faFileCertificate } from '@fortawesome/pro-light-svg-icons';
+import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -51,5 +52,7 @@ export class AppModule {
     library.add(faWrench);
     library.add(faDiceD20);
     library.add(faFileCertificate);
+    library.add(faGithub);
+    library.add(faLinkedin);
   }
 }
