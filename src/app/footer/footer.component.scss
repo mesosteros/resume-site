@@ -6,10 +6,13 @@ footer, nav.footer-nav{
     }
 
     .container {
-        color: #7a7a7a;
+        color: white;
     }
 
     .social{
         margin-top: 5px;
+        a.icon:hover{
+            background-color: transparent;
+        }
     }
 }
