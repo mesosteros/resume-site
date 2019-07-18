@@ -4,12 +4,21 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
 import { library } from '@fortawesome/fontawesome-svg-core';
-// tslint:disable-next-line:max-line-length
-import { faBusinessTime, faCaretDown, faCaretUp, faFileUser, faLaptopCode, faUserCircle, faUserGraduate, faWrench } from '@fortawesome/pro-regular-svg-icons';
+import {
+  faBusinessTime,
+  faCaretDown,
+  faCaretUp,
+  faFileUser,
+  faLaptopCode,
+  faUserCircle,
+  faUserGraduate,
+  faWrench
+} from '@fortawesome/pro-regular-svg-icons';
 import { faDiceD20, faFileCertificate } from '@fortawesome/pro-light-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 import { AppRoutingModule } from './app-routing.module';
+
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { ContentComponent } from './content/content.component';
@@ -21,11 +30,7 @@ import { ContentComponent } from './content/content.component';
  * @class AppModule
  */
 @NgModule({
-  declarations: [
-    AppComponent,
-    NavBarComponent,
-    ContentComponent
-  ],
+  declarations: [AppComponent, NavBarComponent, ContentComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

@@ -3,35 +3,46 @@
     <aside class="menu column is-12 is-fullheight section is-hidden-mobile">
       <a [routerLink]="['']">
         <h1 class="menu-label is-hidden-mobile is-size-3">
-          Carlos Santos</h1>
+          Carlos Santos
+        </h1>
       </a>
       <ul class="menu-list is-size-5">
         <li class="menu__parent">
           <a [routerLink]="['about']" class="menu__parent_item">
             <span class="icon">
               <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
-            </span> About
+            </span>
+            About
           </a>
         </li>
         <li class="menu__parent">
-          <a class="menu__item_expandable menu__parent_item"
-            [ngClass]="{'is-active': resumeSectionExpanded}"
-            (click)="clickResumeSection($event)">
+          <a
+            class="menu__item_expandable menu__parent_item"
+            [ngClass]="{ 'is-active': resumeSectionExpanded }"
+            [routerLink]="['resume']"
+            (click)="clickResumeSection($event)"
+          >
             <span class="icon">
               <fa-icon [icon]="['far', 'file-user']"></fa-icon>
             </span>
             Resume
             <span class="icon">
-              <fa-icon [icon]="['far', 'caret-down']"
-                *ngIf="!resumeSectionExpanded"></fa-icon>
-              <fa-icon [icon]="['far', 'caret-up']"
-                *ngIf="resumeSectionExpanded"></fa-icon>
+              <fa-icon
+                [icon]="['far', 'caret-down']"
+                *ngIf="!resumeSectionExpanded"
+              ></fa-icon>
+              <fa-icon
+                [icon]="['far', 'caret-up']"
+                *ngIf="resumeSectionExpanded"
+              ></fa-icon>
             </span>
           </a>
-          <ul [@openClose]="resumeSectionExpanded ? 'open' : 'closed'"
-            *ngIf="resumeSectionExpanded">
+          <ul
+            [@openClose]="resumeSectionExpanded ? 'open' : 'closed'"
+            *ngIf="resumeSectionExpanded"
+          >
             <li>
-              <a href="#">
+              <a [routerLink]="['resume/skills']">
                 <span class="icon">
                   <fa-icon [icon]="['far', 'wrench']"></fa-icon>
                 </span>
@@ -39,7 +50,7 @@
               </a>
             </li>
             <li class="longer-child-item">
-              <a href="#">
+              <a [routerLink]="['resume/experience']">
                 <span class="icon">
                   <fa-icon [icon]="['far', 'business-time']"></fa-icon>
                 </span>
@@ -47,7 +58,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a [routerLink]="['resume/education']">
                 <span class="icon">
                   <fa-icon [icon]="['far', 'user-graduate']"></fa-icon>
                 </span>
@@ -55,7 +66,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a [routerLink]="['resume/certifications']">
                 <span class="icon">
                   <fa-icon [icon]="['fal', 'file-certificate']"></fa-icon>
                 </span>
@@ -63,7 +74,7 @@
               </a>
             </li>
             <li>
-              <a href="#">
+              <a [routerLink]="['resume/training']">
                 <span class="icon">
                   <fa-icon [icon]="['far', 'laptop-code']"></fa-icon>
                 </span>
@@ -73,16 +84,19 @@
           </ul>
         </li>
         <li class="menu__parent">
-          <a href="#" class="menu__parent_item">
+          <a [routerLink]="['hobbies']" class="menu__parent_item">
             <span class="icon">
               <fa-icon [icon]="['fal', 'dice-d20']"></fa-icon>
-            </span> Hobbies
+            </span>
+            Hobbies
           </a>
         </li>
       </ul>
       <div class="columns is-centered social">
-        <a class="icon first-icon"
-          href="https://www.linkedin.com/in/carlosermidasantos/">
+        <a
+          class="icon first-icon"
+          href="https://www.linkedin.com/in/carlosermidasantos/"
+        >
           <fa-icon [inverse]="true" [icon]="['fab', 'linkedin']" size="lg">
           </fa-icon>
         </a>
