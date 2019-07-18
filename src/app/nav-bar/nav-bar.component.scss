@@ -31,7 +31,7 @@
           color: #7a7a7a;
         }
 
-        a.expandable-menu-item{
+        a.menu__item_expandable{
             padding-bottom: 8px;
         }
 
@@ -43,10 +43,10 @@
           }
         }
       }
-      li.parent-items{
+      li.menu__parent{
         width: 14.25em;
 
-        .parent-item {
+        .menu__parent_item {
           margin-left: 5%;
         }
       }
@@ -79,7 +79,7 @@
         font-size: 0.9rem;
       }
 
-      li.parent-items{
+      li.menu__parent{
         width: 14.9em;
       }
     }
@@ -97,7 +97,7 @@
         font-size: 1.1rem;
       }
 
-      li.parent-items{
+      li.menu__parent{
         width: 14.9em;
       }
     }
@@ -122,7 +122,7 @@
         }
       }
 
-      li.parent-items{
+      li.menu__parent{
         width: 14.9em;
       }
     }

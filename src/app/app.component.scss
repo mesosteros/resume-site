@@ -1,21 +1,17 @@
 @media screen and (max-width: 768px)
 {
-  .right-column{
+  .column__right {
     padding: 0;
-  }
-  
-  .left-column{
-    margin:auto;
   }
 }
 
 @media screen and (min-width: 769px)
 {
-  .left-column, .right-column{
+  .column__left, .column__right {
     padding: 0;
   }
-  
-  .left-column{
-    margin:auto;
-  }
+}  
+
+.column__left {
+  margin:auto;
 }

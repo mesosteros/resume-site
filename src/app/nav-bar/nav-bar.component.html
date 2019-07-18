@@ -6,15 +6,15 @@
           Carlos Santos</h1>
       </a>
       <ul class="menu-list is-size-5">
-        <li class="parent-items">
-          <a [routerLink]="['about']" class="parent-item">
+        <li class="menu__parent">
+          <a [routerLink]="['about']" class="menu__parent_item">
             <span class="icon">
               <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
             </span> About
           </a>
         </li>
-        <li class="parent-items">
-          <a class="expandable-menu-item parent-item"
+        <li class="menu__parent">
+          <a class="menu__item_expandable menu__parent_item"
             [ngClass]="{'is-active': resumeSectionExpanded}"
             (click)="clickResumeSection($event)">
             <span class="icon">
@@ -72,8 +72,8 @@
             </li>
           </ul>
         </li>
-        <li class="parent-items">
-          <a href="#" class="parent-item">
+        <li class="menu__parent">
+          <a href="#" class="menu__parent_item">
             <span class="icon">
               <fa-icon [icon]="['fal', 'dice-d20']"></fa-icon>
             </span> Hobbies
