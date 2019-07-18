@@ -60,12 +60,12 @@ export class SkillsComponent implements OnInit {
    */
   private generateMainSkills(): Array<any> {
     return [
-      { skillId: 'JavaScript/TypeScript', skillImage: '' },
-      { skillId: 'Angular', skillImage: '' },
-      { skillId: 'Git', skillImage: '' },
-      { skillId: 'Jasmine', skillImage: '' },
-      { skillId: 'Jest', skillImage: '' },
-      { skillId: 'HTML/CSS', skillImage: '' }
+      { id: 'JavaScript/TypeScript', image: '' },
+      { id: 'Angular', image: '' },
+      { id: 'Git', image: '' },
+      { id: 'Jasmine', image: '' },
+      { id: 'Jest', image: '' },
+      { id: 'HTML/CSS', image: '' }
     ];
   }
 
@@ -78,14 +78,14 @@ export class SkillsComponent implements OnInit {
    */
   private generateSecondarySkills(): Array<any> {
     return [
-      { skillId: 'Scrum' },
-      { skillId: 'MeteorJS' },
-      { skillId: 'NestJs' },
-      { skillId: 'angularJs' },
-      { skillId: 'bootstrap' },
-      { skillId: 'bulma' },
-      { skillId: 'SCSS' },
-      { skillId: 'MongoDB' }
+      { id: 'Scrum' },
+      { id: 'MeteorJS' },
+      { id: 'NestJs' },
+      { id: 'angularJs' },
+      { id: 'bootstrap' },
+      { id: 'bulma' },
+      { id: 'SCSS' },
+      { id: 'MongoDB' }
     ];
   }
 }
