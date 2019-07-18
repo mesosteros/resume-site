@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Observable, zip, of } from 'rxjs';
+import { Observable, of } from 'rxjs';
 
 /**
  * Skills Component
@@ -38,12 +38,26 @@ export class SkillsComponent implements OnInit {
     );
   }
 
+  /**
+   * Returns an observable stream of all skill arrays
+   *
+   * @private
+   * @returns {Observable<Array<any>>}
+   * @memberof SkillsComponent
+   */
   private generateSkillsList(): Observable<Array<any>> {
     const mainSkills = this.generateMainSkills();
     const secondarySkills = this.generateSecondarySkills();
     return of(new Array(mainSkills, secondarySkills));
   }
 
+  /**
+   * Generates Core Skills Array
+   *
+   * @private
+   * @returns {Array<any>}
+   * @memberof SkillsComponent
+   */
   private generateMainSkills(): Array<any> {
     return [
       { skillId: 'JavaScript/TypeScript', skillImage: '' },
@@ -55,6 +69,13 @@ export class SkillsComponent implements OnInit {
     ];
   }
 
+  /**
+   * Generates Additional Skills Array
+   *
+   * @private
+   * @returns {Array<any>}
+   * @memberof SkillsComponent
+   */
   private generateSecondarySkills(): Array<any> {
     return [
       { skillId: 'Scrum' },
