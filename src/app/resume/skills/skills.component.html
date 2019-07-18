@@ -1,1 +1,22 @@
-<p>skills works!</p>
+<section class="section">
+  <div class="skills container">
+    <div class="skills__main columns">
+      <div class="column is-2" *ngFor="let coreSkill of skillsList[0]">
+        <div class="skills__main_item">
+          <figure class="image is-128x128">
+            <img
+              class="is-rounded"
+              src="https://bulma.io/images/placeholders/128x128.png"
+            />
+          </figure>
+          <label> {{ coreSkill?.skillId }} </label>
+        </div>
+      </div>
+    </div>
+    <div class="skills__secondary columns">
+      <div class="column is-1" *ngFor="let additionalSkill of skillsList[1]">
+        <span class="tag is-success">{{ additionalSkill?.skillId }}</span>
+      </div>
+    </div>
+  </div>
+</section>
