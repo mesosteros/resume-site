@@ -53,7 +53,7 @@ export class ExperienceComponent implements OnInit {
   }
 
   /**
-   * Returns an observable stream of all skill arrays
+   * Returns an observable stream of all experience data
    *
    * @private
    * @returns {Observable<Array<any>>}
@@ -135,7 +135,6 @@ export class ExperienceComponent implements OnInit {
     const formattedDateString = `${
       this.months[d.getMonth()]
     }, ${d.getFullYear()}`;
-    console.log(formattedDateString);
 
     return formattedDateString;
   }
