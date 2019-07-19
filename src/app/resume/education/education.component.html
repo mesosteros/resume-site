@@ -1,1 +1,36 @@
-<p>education works!</p>
+<section class="section">
+  <div class="education container">
+    <div class="columns">
+      <div class="column is-4" *ngFor="let education of educationHistory">
+        <div class="education__item">
+          <figure class="image is-5by3">
+            <img class="is-rounded" src="{{ education?.image }}" />
+          </figure>
+          <figcaption>{{ education?.id }}</figcaption>
+          <p class="education__item_position">{{ education?.position }}</p>
+          <p class="education__item_details">
+            <span class="education__item_dates">
+              {{ education?.startDate }} - {{ education?.endDate }}
+            </span>
+            <span>, </span>
+            <span class="education__item_location">{{
+              education?.location
+            }}</span>
+          </p>
+          <p class="education__item_short_description">
+            {{ education?.shortDescription }}
+          </p>
+          <div class="education__item_long_description list is-hoverable">
+            <a
+              class="education__item_long_description_detail list-item"
+              *ngFor="let detail of education?.longDescription"
+            >
+              {{ detail }}
+              <br />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
