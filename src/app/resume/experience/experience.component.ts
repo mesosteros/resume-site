@@ -57,7 +57,7 @@ export class ExperienceComponent implements OnInit {
    *
    * @private
    * @returns {Observable<Array<any>>}
-   * @memberof SkillsComponent
+   * @memberof ExperienceComponent
    */
   private generateExperiencesList(): Observable<Array<any>> {
     return of(this.generateExperienceHistory());
@@ -68,7 +68,7 @@ export class ExperienceComponent implements OnInit {
    *
    * @private
    * @returns {Array<any>}
-   * @memberof SkillsComponent
+   * @memberof ExperienceComponent
    */
   private generateExperienceHistory(): Array<any> {
     return [
@@ -121,6 +121,15 @@ export class ExperienceComponent implements OnInit {
     ];
   }
 
+  /**
+   * Formats the date to be CV conforming
+   *
+   * @private
+   * @param {number} month
+   * @param {number} year
+   * @returns {*}
+   * @memberof ExperienceComponent
+   */
   private formatDateForCV(month: number, year: number): any {
     const d = new Date(year, month - 1);
     const formattedDateString = `${
