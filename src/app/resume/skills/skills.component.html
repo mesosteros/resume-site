@@ -4,10 +4,7 @@
       <div class="column is-2" *ngFor="let coreSkill of skillsList[0]">
         <div class="skills__main_item">
           <figure class="image is-128x128">
-            <img
-              class="is-rounded"
-              src="https://bulma.io/images/placeholders/128x128.png"
-            />
+            <img class="is-rounded" src="{{ coreSkill?.image }}" />
           </figure>
           <label> {{ coreSkill?.id }} </label>
         </div>

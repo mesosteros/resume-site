@@ -60,12 +60,24 @@ export class SkillsComponent implements OnInit {
    */
   private generateMainSkills(): Array<any> {
     return [
-      { id: 'JavaScript/TypeScript', image: '' },
-      { id: 'Angular', image: '' },
-      { id: 'Git', image: '' },
-      { id: 'Jasmine', image: '' },
-      { id: 'Jest', image: '' },
-      { id: 'HTML/CSS', image: '' }
+      {
+        id: 'JavaScript/TypeScript',
+        image: 'https://bulma.io/images/placeholders/128x128.png'
+      },
+      {
+        id: 'Angular',
+        image: 'https://bulma.io/images/placeholders/128x128.png'
+      },
+      { id: 'Git', image: 'https://bulma.io/images/placeholders/128x128.png' },
+      {
+        id: 'Jasmine',
+        image: 'https://bulma.io/images/placeholders/128x128.png'
+      },
+      { id: 'Jest', image: 'https://bulma.io/images/placeholders/128x128.png' },
+      {
+        id: 'HTML/CSS',
+        image: 'https://bulma.io/images/placeholders/128x128.png'
+      }
     ];
   }
 
