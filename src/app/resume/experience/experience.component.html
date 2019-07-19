@@ -1,1 +1,36 @@
-<p>experience works!</p>
+<section class="section">
+  <div class="experiences container">
+    <div class="columns">
+      <div class="column is-4" *ngFor="let experience of experienceHistory">
+        <div class="experiences__item">
+          <figure class="image is-5by3">
+            <img class="is-rounded" src="{{ experience?.image }}" />
+          </figure>
+          <figcaption>{{ experience?.id }}</figcaption>
+          <p class="experiences__item_position">{{ experience?.position }}</p>
+          <p class="experiences__item_details">
+            <span class="experiences__item_dates">
+              {{ experience?.startDate }} - {{ experience?.endDate }}
+            </span>
+            <span>, </span>
+            <span class="experiences__item_location">{{
+              experience?.location
+            }}</span>
+          </p>
+          <p class="experiences__item_short_description">
+            {{ experience?.shortDescription }}
+          </p>
+          <div class="experiences__item_long_description list is-hoverable">
+            <a
+              class="experiences__item_long_description_detail list-item"
+              *ngFor="let detail of experience?.longDescription"
+            >
+              {{ detail }}
+              <br />
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
