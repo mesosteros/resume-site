@@ -10,7 +10,7 @@
         <li class="menu__parent">
           <a [routerLink]="['about']" class="menu__parent_item">
             <span class="icon">
-              <fa-icon [icon]="['far', 'user-circle']"></fa-icon>
+              <fa-icon [icon]="faUserCircle"></fa-icon>
             </span>
             About
           </a>
@@ -23,16 +23,16 @@
             (click)="clickResumeSection($event)"
           >
             <span class="icon">
-              <fa-icon [icon]="['far', 'file-user']"></fa-icon>
+              <fa-icon [icon]="faFileUser"></fa-icon>
             </span>
             Resume
             <span class="icon">
               <fa-icon
-                [icon]="['far', 'caret-down']"
+                [icon]="faCaretDown"
                 *ngIf="!resumeSectionExpanded"
               ></fa-icon>
               <fa-icon
-                [icon]="['far', 'caret-up']"
+                [icon]="faCaretUp"
                 *ngIf="resumeSectionExpanded"
               ></fa-icon>
             </span>
@@ -44,7 +44,7 @@
             <li>
               <a [routerLink]="['resume/skills']">
                 <span class="icon">
-                  <fa-icon [icon]="['far', 'wrench']"></fa-icon>
+                  <fa-icon [icon]="faWrench"></fa-icon>
                 </span>
                 Skills
               </a>
@@ -52,7 +52,7 @@
             <li class="longer-child-item">
               <a [routerLink]="['resume/experience']">
                 <span class="icon">
-                  <fa-icon [icon]="['far', 'business-time']"></fa-icon>
+                  <fa-icon [icon]="faBusinessTime"></fa-icon>
                 </span>
                 Professional experience
               </a>
@@ -60,7 +60,7 @@
             <li>
               <a [routerLink]="['resume/education']">
                 <span class="icon">
-                  <fa-icon [icon]="['far', 'user-graduate']"></fa-icon>
+                  <fa-icon [icon]="faUserGraduate"></fa-icon>
                 </span>
                 Education
               </a>
@@ -68,7 +68,7 @@
             <li>
               <a [routerLink]="['resume/certifications']">
                 <span class="icon">
-                  <fa-icon [icon]="['fal', 'file-certificate']"></fa-icon>
+                  <fa-icon [icon]="faFileCertificate"></fa-icon>
                 </span>
                 Certifications
               </a>
@@ -76,7 +76,7 @@
             <li>
               <a [routerLink]="['resume/training']">
                 <span class="icon">
-                  <fa-icon [icon]="['far', 'laptop-code']"></fa-icon>
+                  <fa-icon [icon]="faLaptopCode"></fa-icon>
                 </span>
                 Training
               </a>
@@ -86,7 +86,7 @@
         <li class="menu__parent">
           <a [routerLink]="['hobbies']" class="menu__parent_item">
             <span class="icon">
-              <fa-icon [icon]="['fal', 'dice-d20']"></fa-icon>
+              <fa-icon [icon]="faDiceD20"></fa-icon>
             </span>
             Hobbies
           </a>
@@ -97,12 +97,10 @@
           class="icon first-icon"
           href="https://www.linkedin.com/in/carlosermidasantos/"
         >
-          <fa-icon [inverse]="true" [icon]="['fab', 'linkedin']" size="lg">
-          </fa-icon>
+          <fa-icon [inverse]="true" [icon]="faLinkedin" size="lg"> </fa-icon>
         </a>
         <a class="icon" href="https://github.com/mesosteros">
-          <fa-icon [inverse]="true" [icon]="['fab', 'github']" size="lg">
-          </fa-icon>
+          <fa-icon [inverse]="true" [icon]="faGithub" size="lg"> </fa-icon>
         </a>
       </div>
     </aside>

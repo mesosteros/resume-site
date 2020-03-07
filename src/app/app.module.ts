@@ -1,27 +1,14 @@
-import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { BrowserModule } from "@angular/platform-browser";
+import { NgModule } from "@angular/core";
+import { BrowserAnimationsModule } from "@angular/platform-browser/animations";
 
-import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
-import { library } from '@fortawesome/fontawesome-svg-core';
-import {
-  faBusinessTime,
-  faCaretDown,
-  faCaretUp,
-  faFileUser,
-  faLaptopCode,
-  faUserCircle,
-  faUserGraduate,
-  faWrench
-} from '@fortawesome/pro-regular-svg-icons';
-import { faDiceD20, faFileCertificate } from '@fortawesome/pro-light-svg-icons';
-import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { FontAwesomeModule } from "@fortawesome/angular-fontawesome";
 
-import { AppRoutingModule } from './app-routing.module';
+import { AppRoutingModule } from "./app-routing.module";
 
-import { AppComponent } from './app.component';
-import { NavBarComponent } from './nav-bar/nav-bar.component';
-import { ContentComponent } from './content/content.component';
+import { AppComponent } from "./app.component";
+import { NavBarComponent } from "./nav-bar/nav-bar.component";
+import { ContentComponent } from "./content/content.component";
 
 /**
  * App Base Module
@@ -45,18 +32,5 @@ export class AppModule {
    * Creates an instance of AppModule.
    * @memberof AppModule
    */
-  constructor() {
-    library.add(faBusinessTime);
-    library.add(faCaretDown);
-    library.add(faCaretUp);
-    library.add(faFileUser);
-    library.add(faLaptopCode);
-    library.add(faUserCircle);
-    library.add(faUserGraduate);
-    library.add(faWrench);
-    library.add(faDiceD20);
-    library.add(faFileCertificate);
-    library.add(faGithub);
-    library.add(faLinkedin);
-  }
+  constructor() {}
 }
