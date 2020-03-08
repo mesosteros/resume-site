@@ -1,49 +1,47 @@
-@media screen and (max-width: 768px)
-{
+@media screen and (max-width: 768px) {
   #menu-toggle:checked + .nav-menu {
     display: block;
   }
 
-  .nav-menu{
+  .nav-menu {
     padding-top: 15px;
   }
 }
 
-@media screen and (min-width: 769px)
-{
-  .menu{
+@media screen and (min-width: 769px) {
+  .menu {
     margin-left: auto;
     margin-right: auto;
-    
-    .menu-label{
+
+    .menu-label {
       text-align: center;
       padding-bottom: 10%;
     }
 
-    .menu-list{
+    .menu-list {
       padding-left: 1.25em;
 
-      li{
+      li {
         width: 267px;
         font-size: 1rem;
 
-        a{
+        a {
           color: #7a7a7a;
         }
 
-        a.menu__item_expandable{
-            padding-bottom: 8px;
+        a.menu__item_expandable {
+          padding-bottom: 8px;
         }
 
-        ul{
-          padding-left: 0.10em;
+        ul {
+          padding-left: 0.1em;
 
-          .longer-child-item{
+          .longer-child-item {
             margin-right: -25%;
           }
         }
       }
-      li.menu__parent{
+      li.menu__parent {
         width: 14.25em;
 
         .menu__parent_item {
@@ -51,80 +49,81 @@
         }
       }
     }
-    .social{
+    .social {
       margin-top: 20px;
-      
+
       a.icon:hover {
-          background-color: transparent;
+        background-color: transparent;
       }
       .first-icon {
-          margin-right: 10px;
+        margin-right: 10px;
       }
     }
   }
-                        
-  .is-active{
+
+  .is-active {
     color: white !important;
   }
 }
 
-@media screen and (max-width: 1527px)
-{
+@media screen and (max-width: 1527px) {
   .menu {
-    .menu-list{
+    .menu-list {
       padding-left: 1em;
-      
-      li{
+
+      li {
         width: 14em;
         font-size: 0.9rem;
       }
 
-      li.menu__parent{
+      li.menu__parent {
         width: 14.9em;
       }
     }
   }
 }
 
-@media screen and (min-width: 1528px)
-{
+@media screen and (min-width: 1528px) {
   .menu {
-    .menu-list{
+    .menu-list {
       padding-left: 1.5em;
 
-      li{
+      li {
         width: 14em;
         font-size: 1.1rem;
       }
 
-      li.menu__parent{
+      li.menu__parent {
         width: 14.9em;
       }
     }
   }
 }
 
-@media screen and (min-width: 1980px)
-{
+@media screen and (min-width: 1980px) {
   .menu {
-    .menu-list{
+    .menu-list {
       padding-left: 2.5em;
 
-      li{
+      li {
         width: 14em;
         font-size: 1.25rem;
 
-        ul{
-          .longer.child-item{
+        ul {
+          .longer.child-item {
             width: 15em;
             max-width: 285px;
           }
         }
       }
 
-      li.menu__parent{
+      li.menu__parent {
         width: 14.9em;
       }
     }
   }
+}
+
+.nav-menu-mobile {
+  text-align: center;
 }

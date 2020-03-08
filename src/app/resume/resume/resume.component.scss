@@ -22,3 +22,21 @@
     }
   }
 }
+
+@media screen and (max-width: 768px) {
+  .section {
+    padding-top: 0;
+
+    .resume__nav__box {
+      margin-top: 2vh;
+    }
+
+    .resume__photo__container {
+      padding-top: 10vh;
+    }
+
+    .resume__download__button {
+      margin-top: -99vh;
+    }
+  }
+}

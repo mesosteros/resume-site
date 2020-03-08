@@ -110,22 +110,34 @@
       <span></span>
     </label>
     <input type="checkbox" id="menu-toggle" class="is-hidden" />
-    <div class="nav-right nav-menu">
-      <a class="nav-item is-tab is-hidden-tablet">
-        <span class="icon"><i class="fa fa-home"></i></span> About
+    <div class="nav-right nav-menu nav-menu-mobile">
+      <a [routerLink]="['about']" class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><fa-icon [icon]="faUserCircle"></fa-icon></span>
+        About
       </a>
-      <a class="nav-item is-tab is-hidden-tablet">
-        <span class="icon"><i class="fa fa-table"></i></span> Resume
+      <a [routerLink]="['resume']" class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><fa-icon [icon]="faFileUser"></fa-icon></span>
+        Resume
       </a>
-      <a class="nav-item is-tab is-hidden-tablet">
-        <span class="icon"><i class="fa fa-info"></i></span> About
+      <a [routerLink]="['hobbies']" class="nav-item is-tab is-hidden-tablet">
+        <span class="icon"><fa-icon [icon]="faDiceD20"></fa-icon></span>
+        Hobbies
       </a>
-
-      <a class="nav-item is-tab is-active">
-        <span class="icon"><i class="fa fa-user"></i></span>
+      <a
+        href="https://www.linkedin.com/in/carlosermidasantos/"
+        class="nav-item is-tab is-hidden-tablet"
+      >
+        <span class="icon"
+          ><fa-icon [inverse]="true" [icon]="faLinkedin" size="lg"> </fa-icon
+        ></span>
       </a>
-      <a class="nav-item is-tab">
-        <span class="icon"><i class="fa fa-sign-out"></i></span>
+      <a
+        href="https://github.com/mesosteros"
+        class="nav-item is-tab is-hidden-tablet"
+      >
+        <span class="icon"
+          ><fa-icon [inverse]="true" [icon]="faGithub" size="lg"> </fa-icon
+        ></span>
       </a>
     </div>
   </div>
