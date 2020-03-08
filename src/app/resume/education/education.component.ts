@@ -72,8 +72,7 @@ export class EducationComponent implements OnInit {
     return [
       {
         id: "University of Trás-os-Montes e Alto Douro",
-        image:
-          "https://media1-production-mightynetworks.imgix.net/asset/4592423/UTAD-round.jpg?ixlib=rails-0.3.0&fm=jpg&q=100&auto=format&w=256&h=256&fit=crop&crop=faces",
+        image: "../../../assets/UTAD.jpg",
         shortDescription:
           "Bachelor of Information and Communication Technology",
         longDescription: ["Information Systems", "Programming Methodologies"],
@@ -84,8 +83,7 @@ export class EducationComponent implements OnInit {
       },
       {
         id: "University of Linköping",
-        image:
-          "https://res-3.cloudinary.com/crunchbase-production/image/upload/c_lpad,h_256,w_256,f_auto,q_auto:eco/v1409787711/tzayonkjejyttfn4sson.jpg",
+        image: "../../../assets/linkoping.png",
         shortDescription: "Erasmus",
         longDescription: ["Erasmus experience for 1 semester"],
         location: "Linköping, Sweden",

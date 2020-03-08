@@ -60,30 +60,27 @@ export class SkillsComponent implements OnInit {
     return [
       {
         id: "JavaScript/TypeScript",
-        image:
-          "https://chocolatey.org/content/packageimages/typescript.3.8.3.png"
+        image: "../../../assets/typescript.3.8.3.png"
       },
       {
         id: "Angular",
-        image: "https://miro.medium.com/max/256/1*suUQPQVUKJJ-BmFBuXju5g.png"
+        image: "../../../assets/angular.png"
       },
       {
         id: "Git",
-        image:
-          "https://i0.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/256px-Git_icon.svg.png"
+        image: "../../../assets/git.png"
       },
       {
         id: "Jasmine",
-        image: "https://jasmine.github.io/images/jasmine-white-horizontal.svg"
+        image: "../../../assets/jasmine.svg"
       },
       {
         id: "Jest",
-        image:
-          "https://firsttris.gallerycdn.vsassets.io/extensions/firsttris/vscode-jest-runner/0.4.15/1579636752731/Microsoft.VisualStudio.Services.Icons.Default"
+        image: "../../../assets/jest.png"
       },
       {
         id: "HTML/CSS",
-        image: "https://icon-library.net/images/html5-icon/html5-icon-7.jpg"
+        image: "../../../assets/html5.png"
       }
     ];
   }

@@ -76,8 +76,7 @@ export class ExperienceComponent implements OnInit {
     return [
       {
         id: "Altran",
-        image:
-          "https://media-exp1.licdn.com/dms/image/C560BAQHg32IurQQB_Q/company-logo_200_200/0?e=2159024400&v=beta&t=w1Ifk_Ym6Qk-E9uyApwIy9wHeQcjFJjEmzxVgqwkPrI",
+        image: "../../../assets/altran.png",
         shortDescription:
           "Altran is an Engineering Consulting company, with projects in the Information Technology domain.",
         longDescription: [
@@ -93,8 +92,7 @@ export class ExperienceComponent implements OnInit {
       },
       {
         id: "Altran",
-        image:
-          "https://media-exp1.licdn.com/dms/image/C560BAQHg32IurQQB_Q/company-logo_200_200/0?e=2159024400&v=beta&t=w1Ifk_Ym6Qk-E9uyApwIy9wHeQcjFJjEmzxVgqwkPrI",
+        image: "../../../assets/altran.png",
         shortDescription:
           "Altran is an Engineering Consulting company, with projects in the Information Technology domain.",
         longDescription: [
@@ -109,8 +107,7 @@ export class ExperienceComponent implements OnInit {
       },
       {
         id: "Innabler",
-        image:
-          "https://media-exp1.licdn.com/dms/image/C4D0BAQFDrxrLGfKEMg/company-logo_200_200/0?e=1591833600&v=beta&t=QQhd_I2SUZO__QNLGkci7Hh5jEg6K6Fc26SKImgN7Lc",
+        image: "../../../assets/innabler.png",
         shortDescription:
           "Innabler is a small start-up company, focused on creating websites for clients.",
         longDescription: [
