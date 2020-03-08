@@ -1,5 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component, OnInit } from "@angular/core";
+import { Observable, of } from "rxjs";
 
 /**
  * Skills Component
@@ -9,9 +9,9 @@ import { Observable, of } from 'rxjs';
  * @implements {OnInit}
  */
 @Component({
-  selector: 'app-skills',
-  templateUrl: './skills.component.html',
-  styleUrls: ['./skills.component.scss']
+  selector: "app-skills",
+  templateUrl: "./skills.component.html",
+  styleUrls: ["./skills.component.scss"]
 })
 export class SkillsComponent implements OnInit {
   public skillsList: Array<any>;
@@ -31,11 +31,9 @@ export class SkillsComponent implements OnInit {
    * @memberof SkillsComponent
    */
   ngOnInit() {
-    this.generateSkillsList().subscribe(
-      (skills: Array<any>): void => {
-        this.skillsList = skills;
-      }
-    );
+    this.generateSkillsList().subscribe((skills: Array<any>): void => {
+      this.skillsList = skills;
+    });
   }
 
   /**
@@ -61,22 +59,31 @@ export class SkillsComponent implements OnInit {
   private generateMainSkills(): Array<any> {
     return [
       {
-        id: 'JavaScript/TypeScript',
-        image: 'https://bulma.io/images/placeholders/128x128.png'
+        id: "JavaScript/TypeScript",
+        image:
+          "https://chocolatey.org/content/packageimages/typescript.3.8.3.png"
       },
       {
-        id: 'Angular',
-        image: 'https://bulma.io/images/placeholders/128x128.png'
+        id: "Angular",
+        image: "https://miro.medium.com/max/256/1*suUQPQVUKJJ-BmFBuXju5g.png"
       },
-      { id: 'Git', image: 'https://bulma.io/images/placeholders/128x128.png' },
       {
-        id: 'Jasmine',
-        image: 'https://bulma.io/images/placeholders/128x128.png'
+        id: "Git",
+        image:
+          "https://i0.wp.com/upload.wikimedia.org/wikipedia/commons/thumb/3/3f/Git_icon.svg/256px-Git_icon.svg.png"
       },
-      { id: 'Jest', image: 'https://bulma.io/images/placeholders/128x128.png' },
       {
-        id: 'HTML/CSS',
-        image: 'https://bulma.io/images/placeholders/128x128.png'
+        id: "Jasmine",
+        image: "https://jasmine.github.io/images/jasmine-white-horizontal.svg"
+      },
+      {
+        id: "Jest",
+        image:
+          "https://firsttris.gallerycdn.vsassets.io/extensions/firsttris/vscode-jest-runner/0.4.15/1579636752731/Microsoft.VisualStudio.Services.Icons.Default"
+      },
+      {
+        id: "HTML/CSS",
+        image: "https://icon-library.net/images/html5-icon/html5-icon-7.jpg"
       }
     ];
   }
@@ -90,14 +97,14 @@ export class SkillsComponent implements OnInit {
    */
   private generateSecondarySkills(): Array<any> {
     return [
-      { id: 'Scrum' },
-      { id: 'MeteorJS' },
-      { id: 'NestJs' },
-      { id: 'angularJs' },
-      { id: 'bootstrap' },
-      { id: 'bulma' },
-      { id: 'SCSS' },
-      { id: 'MongoDB' }
+      { id: "Scrum" },
+      { id: "MeteorJS" },
+      { id: "NestJs" },
+      { id: "angularJs" },
+      { id: "bootstrap" },
+      { id: "bulma" },
+      { id: "SCSS" },
+      { id: "MongoDB" }
     ];
   }
 }
