@@ -1,0 +1,11 @@
+.welcome__container {
+  position: relative;
+  display: inline-block;
+
+  .welcome__title {
+    position: absolute;
+    z-index: 1;
+    top: 30%;
+    text-align: right;
+  }
+}
