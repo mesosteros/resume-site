@@ -1,17 +1,17 @@
-@media screen and (max-width: 768px)
-{
+@media screen and (max-width: 768px) {
+  .column__right {
+    padding: 0;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .column__left,
   .column__right {
     padding: 0;
   }
 }
 
-@media screen and (min-width: 769px)
-{
-  .column__left, .column__right {
-    padding: 0;
-  }
-}  
-
 .column__left {
-  margin:auto;
+  margin: auto;
 }
