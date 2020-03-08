@@ -4,7 +4,7 @@
       <div class="column is-4" *ngFor="let experience of experienceHistory">
         <div class="experiences__item">
           <figure class="image is-128x128">
-            <img class="is-rounded" src="{{ experience?.image }}" />
+            <img class="is-rounded" src="{{ experience?.image }}" alt={{experience?.id}}/>
           </figure>
           <p class="experiences__item_position">{{ experience?.position }}</p>
           <p class="experiences__item_details">

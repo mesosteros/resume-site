@@ -4,7 +4,7 @@
       <div class="column is-4" *ngFor="let education of educationHistory">
         <div class="education__item">
           <figure class="image is-128x128">
-            <img class="is-rounded" src="{{ education?.image }}" />
+            <img class="is-rounded" src="{{ education?.image }}" alt={{education?.id}}/>
           </figure>
           <figcaption class="education__item_id">
             {{ education?.id }}
