@@ -1,1 +1,42 @@
-<p>resume works!</p>
+<section class="section">
+  <div class="resume container">
+    <div class="columns">
+      <div class="column is-one-third resume__photo__container">
+        <figure class="image is-4by4">
+          <img
+            class="is-rounded professional__pic"
+            src="../../../assets/professionalPhoto.png"
+          />
+        </figure>
+      </div>
+      <div class="column is-two-thirds resume__nav__box">
+        <div class="tags are-large is-right">
+          <span class="tag is-primary"
+            ><a [routerLink]="['skills']">Skills</a></span
+          >
+          <span class="tag is-primary"
+            ><a [routerLink]="['experience']">Professional Experience</a></span
+          >
+          <span class="tag is-primary"
+            ><a [routerLink]="['education']">Education</a></span
+          >
+          <span class="tag is-primary"
+            ><a [routerLink]="['certifications']">Certifications</a></span
+          >
+          <span class="tag is-primary"
+            ><a [routerLink]="['training']">Training</a></span
+          >
+        </div>
+        <div class="tags are-large is-right">
+          <a
+            class="download__button tag is-success"
+            href="../../../assets/CarlosSantosResume.pdf"
+            download
+          >
+            Download My CV (PDF)
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
