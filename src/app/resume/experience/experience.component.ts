@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import { Observable, of } from 'rxjs';
+import { Component, OnInit } from "@angular/core";
+import { Observable, of } from "rxjs";
+import { faArrowAltCircleLeft } from "@fortawesome/pro-regular-svg-icons";
 
 /**
  * Experience Component
@@ -9,25 +10,26 @@ import { Observable, of } from 'rxjs';
  * @implements {OnInit}
  */
 @Component({
-  selector: 'app-experience',
-  templateUrl: './experience.component.html',
-  styleUrls: ['./experience.component.scss']
+  selector: "app-experience",
+  templateUrl: "./experience.component.html",
+  styleUrls: ["./experience.component.scss"]
 })
 export class ExperienceComponent implements OnInit {
+  faArrowAltCircleLeft = faArrowAltCircleLeft;
   public experienceHistory: Array<any>;
   public months = [
-    'Jan.',
-    'Feb.',
-    'Mar.',
-    'Apr.',
-    'May',
-    'June',
-    'July',
-    'Aug.',
-    'Sep.',
-    'Oct.',
-    'Nov.',
-    'Dec.'
+    "Jan.",
+    "Feb.",
+    "Mar.",
+    "Apr.",
+    "May",
+    "June",
+    "July",
+    "Aug.",
+    "Sep.",
+    "Oct.",
+    "Nov.",
+    "Dec."
   ];
 
   /**
@@ -73,48 +75,51 @@ export class ExperienceComponent implements OnInit {
   private generateExperienceHistory(): Array<any> {
     return [
       {
-        id: 'Altran',
-        image: 'https://bulma.io/images/placeholders/128x128.png',
+        id: "Altran",
+        image:
+          "https://media-exp1.licdn.com/dms/image/C560BAQHg32IurQQB_Q/company-logo_200_200/0?e=2159024400&v=beta&t=w1Ifk_Ym6Qk-E9uyApwIy9wHeQcjFJjEmzxVgqwkPrI",
         shortDescription:
-          'Altran is an Engineering Consulting company, with projects in the Information Technology domain.',
+          "Altran is an Engineering Consulting company, with projects in the Information Technology domain.",
         longDescription: [
-          'Developed Web Applications using Angular 6/7 and NestJS.',
-          'Worked on Unit Testing using Jasmine and Jest and increased test coverage above 90%.',
-          'Evaluated candidates on Technical Interviews and helped improved the interview questionnaire.',
-          'Created and established departments’ Code Copyright manual for use in all projects.'
+          "Developed Web Applications using Angular 6/7 and NestJS.",
+          "Worked on Unit Testing using Jasmine and Jest and increased test coverage above 90%.",
+          "Evaluated candidates on Technical Interviews and helped improved the interview questionnaire.",
+          "Created and established departments’ Code Copyright manual for use in all projects."
         ],
-        location: 'Fundão, Portugal',
-        position: 'Consultant',
+        location: "Fundão, Portugal",
+        position: "Consultant",
         startDate: this.formatDateForCV(7, 2018),
-        endDate: 'current'
+        endDate: "Current"
       },
       {
-        id: 'Altran',
-        image: 'https://bulma.io/images/placeholders/128x128.png',
+        id: "Altran",
+        image:
+          "https://media-exp1.licdn.com/dms/image/C560BAQHg32IurQQB_Q/company-logo_200_200/0?e=2159024400&v=beta&t=w1Ifk_Ym6Qk-E9uyApwIy9wHeQcjFJjEmzxVgqwkPrI",
         shortDescription:
-          'Altran is an Engineering Consulting company, with projects in the Information Technology domain.',
+          "Altran is an Engineering Consulting company, with projects in the Information Technology domain.",
         longDescription: [
-          'Developed Web Applications using AngularJS, Angular 2+, NestJS, and KendoUI.',
-          'Learned and trained other team members in Unit Testing with Jasmine and Jest.',
-          'Learned AngularJS, Angular 2+ and to work under the Scrum methodology.'
+          "Developed Web Applications using AngularJS, Angular 2+, NestJS, and KendoUI.",
+          "Learned and trained other team members in Unit Testing with Jasmine and Jest.",
+          "Learned AngularJS, Angular 2+ and to work under the Scrum methodology."
         ],
-        location: 'Fundão, Portugal',
-        position: 'Junior Consultant',
+        location: "Fundão, Portugal",
+        position: "Junior Consultant",
         startDate: this.formatDateForCV(6, 2016),
         endDate: this.formatDateForCV(7, 2018)
       },
       {
-        id: 'Innabler',
-        image: 'https://bulma.io/images/placeholders/128x128.png',
+        id: "Innabler",
+        image:
+          "https://media-exp1.licdn.com/dms/image/C4D0BAQFDrxrLGfKEMg/company-logo_200_200/0?e=1591833600&v=beta&t=QQhd_I2SUZO__QNLGkci7Hh5jEg6K6Fc26SKImgN7Lc",
         shortDescription:
-          'Innabler is a small start-up company, focused on creating websites for clients.',
+          "Innabler is a small start-up company, focused on creating websites for clients.",
         longDescription: [
-          'Developed Web Applications using the MeteorJS Framework.',
-          'Learned to code in JavaScript.',
-          'Created an Arch Linux ARM server with a local Git repository for internal projects.'
+          "Developed Web Applications using the MeteorJS Framework.",
+          "Learned to code in JavaScript.",
+          "Created an Arch Linux ARM server with a local Git repository for internal projects."
         ],
-        location: 'Guimarães, Portugal',
-        position: 'Web Developer Intern',
+        location: "Guimarães, Portugal",
+        position: "Web Developer Intern",
         startDate: this.formatDateForCV(4, 2014),
         endDate: this.formatDateForCV(8, 2015)
       }
