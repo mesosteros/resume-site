@@ -3,10 +3,12 @@
     <div class="columns">
       <div class="column is-4" *ngFor="let education of educationHistory">
         <div class="education__item">
-          <figure class="image is-5by3">
+          <figure class="image is-128x128">
             <img class="is-rounded" src="{{ education?.image }}" />
           </figure>
-          <figcaption>{{ education?.id }}</figcaption>
+          <figcaption class="education__item_id">
+            {{ education?.id }}
+          </figcaption>
           <p class="education__item_position">{{ education?.position }}</p>
           <p class="education__item_details">
             <span class="education__item_dates">
