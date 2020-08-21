@@ -25,5 +25,14 @@
         >
       </div>
     </div>
+    <div class="skills__secondary is-centered">
+      <div class="tags is-centered">
+        <span
+          class="tag is-success"
+          *ngFor="let languageSkill of languageSkillsList"
+          >{{ languageSkill?.id }} - {{ languageSkill?.level }}</span
+        >
+      </div>
+    </div>
   </div>
 </section>
