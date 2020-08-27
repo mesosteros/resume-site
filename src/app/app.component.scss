@@ -1,6 +1,7 @@
 @media screen and (max-width: 768px) {
   .column__right {
     padding: 0;
+    content-visibility: auto;
   }
 }
 
@@ -8,9 +9,11 @@
   .column__left,
   .column__right {
     padding: 0;
+    content-visibility: auto;
   }
 }
 
 .column__left {
   margin: auto;
+  content-visibility: auto;
 }

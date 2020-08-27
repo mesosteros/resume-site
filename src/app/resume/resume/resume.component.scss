@@ -1,6 +1,9 @@
 .resume__photo__container {
   text-align: center;
 }
+.professional__pic {
+  content-visibility: auto;
+}
 
 .resume__nav__box {
   margin-top: 20vh;
@@ -20,6 +23,10 @@
     .download__button:hover {
       color: lightblue;
     }
+  }
+
+  .resume__download__button {
+    content-visibility: auto;
   }
 }
 
