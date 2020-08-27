@@ -1,6 +1,8 @@
 # ResumeSite
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 8.0.6.
+It has since been updated to Angular 10.
+The new content-visibility CSS property supported in Chrome 85+ was implemented on 27/08/2020.
 
 ## Development server
 
