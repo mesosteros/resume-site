@@ -1,7 +1,3 @@
-.education__item {
-  content-visibility: auto;
-}
-
 .education__item_id,
 .education__item_position,
 .education__item_details {
@@ -13,5 +9,31 @@
 }
 
 .education__item_long_description {
-  margin-top: 5vh;
+  margin-top: 2vh;
+  border-radius: 1rem;
+}
+
+.education__item_long_description a {
+  background-color: grey;
+}
+
+.education__item_id {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.education__item_short_description {
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1023px) {
+  .columns {
+    flex-direction: column;
+  }
 }
