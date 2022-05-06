@@ -30,10 +30,32 @@
 .columns {
   display: flex;
   flex-wrap: wrap;
+  justify-content: center;
 }
 
-@media screen and (max-width: 1023px) {
+.column {
+  margin-right: 5rem;
+}
+
+.column:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
   .columns {
     flex-direction: column;
+    justify-content: center;
+    align-items: center;
   }
+
+  .column {
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+}
+
+.education__item_image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
