@@ -138,6 +138,10 @@ h1 {
 
   a {
     color: white;
-    padding-left: 1rem;
+    padding-right: 1rem;
+  }
+
+  a:last-of-type {
+    padding-right: 0;
   }
 }
