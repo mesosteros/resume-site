@@ -1,7 +1,6 @@
 .training {
-  overflow-y: scroll;
-  max-height: 80vh;
-  content-visibility: auto;
+  display: flex;
+  justify-content: center;
 
   ul {
     margin-left: 2vh;
