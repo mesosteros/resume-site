@@ -1,15 +1,37 @@
 .welcome__container {
-  position: relative;
-  display: inline-block;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 
   .welcome__title {
-    position: absolute;
     z-index: 1;
-    top: 30%;
     text-align: right;
   }
 }
 
-.welcome__image {
-  content-visibility: auto;
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1023px) {
+  .columns {
+    flex-direction: column;
+  }
+
+  .welcome__title {
+    text-align: center;
+  }
+
+  .welcome__image {
+    padding-top: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .welcome__title {
+    font-size: 2rem;
+    text-align: center;
+  }
 }
