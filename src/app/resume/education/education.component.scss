@@ -9,5 +9,53 @@
 }
 
 .education__item_long_description {
-  margin-top: 5vh;
+  margin-top: 2vh;
+  border-radius: 1rem;
+}
+
+.education__item_long_description a {
+  background-color: grey;
+}
+
+.education__item_id {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.education__item_short_description {
+  padding-top: 1rem;
+  font-weight: bold;
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.column {
+  margin-right: 5rem;
+}
+
+.column:last-of-type {
+  margin-right: 0;
+}
+
+@media screen and (max-width: 767px) {
+  .columns {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .column {
+    margin-right: 0;
+    margin-top: 1rem;
+  }
+}
+
+.education__item_image {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }

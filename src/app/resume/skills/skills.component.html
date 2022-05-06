@@ -8,11 +8,12 @@
         <div class="skills__main_item">
           <figure class="image is-128x128 is-flex">
             <img
-              class="is-rounded"
+              [class]="coreSkill?.id === 'Jest' ? 'is-rounded' : ''"
               src="{{ coreSkill?.image }}"
               alt="{{ coreSkill?.id }}"
             />
           </figure>
+          <h1>{{ coreSkill?.id }}</h1>
         </div>
       </div>
     </div>
@@ -22,6 +23,15 @@
           class="tag is-success"
           *ngFor="let additionalSkill of skillsList[1]"
           >{{ additionalSkill?.id }}</span
+        >
+      </div>
+    </div>
+    <div class="skills__secondary is-centered">
+      <div class="tags is-centered">
+        <span
+          class="tag is-success"
+          *ngFor="let languageSkill of languageSkillsList"
+          >{{ languageSkill?.id }} - {{ languageSkill?.level }}</span
         >
       </div>
     </div>

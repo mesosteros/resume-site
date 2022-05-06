@@ -1,0 +1,22 @@
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.content {
+  padding: 1rem;
+
+  h1 {
+    font-size: 2rem;
+  }
+
+  p {
+    font-size: 1.5rem;
+  }
+}
+
+@media screen and (max-width: 1023px) {
+  .columns {
+    flex-direction: column;
+  }
+}

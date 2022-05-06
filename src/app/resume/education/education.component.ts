@@ -11,7 +11,7 @@ import { Observable, of } from "rxjs";
 @Component({
   selector: "app-education",
   templateUrl: "./education.component.html",
-  styleUrls: ["./education.component.scss"]
+  styleUrls: ["./education.component.scss"],
 })
 export class EducationComponent implements OnInit {
   public educationHistory: Array<any>;
@@ -27,7 +27,7 @@ export class EducationComponent implements OnInit {
     "Sep.",
     "Oct.",
     "Nov.",
-    "Dec."
+    "Dec.",
   ];
 
   /**
@@ -73,13 +73,12 @@ export class EducationComponent implements OnInit {
       {
         id: "University of Trás-os-Montes e Alto Douro",
         image: "../../../assets/UTAD.jpg",
-        shortDescription:
-          "Bachelor of Information and Communication Technology",
+        shortDescription: "BsC in Information and Communication Technology",
         longDescription: ["Information Systems", "Programming Methodologies"],
         location: "Vila Real, Portugal",
         type: "Bachelor of Information and Communication Technology",
         startDate: this.formatDateForCV(9, 2006),
-        endDate: this.formatDateForCV(7, 2010)
+        endDate: this.formatDateForCV(7, 2010),
       },
       {
         id: "University of Linköping",
@@ -89,8 +88,8 @@ export class EducationComponent implements OnInit {
         location: "Linköping, Sweden",
         type: "Junior Consultant",
         startDate: this.formatDateForCV(8, 2008),
-        endDate: this.formatDateForCV(1, 2009)
-      }
+        endDate: this.formatDateForCV(1, 2009),
+      },
     ];
   }
 

@@ -11,10 +11,12 @@ import { Observable, of } from "rxjs";
 @Component({
   selector: "app-skills",
   templateUrl: "./skills.component.html",
-  styleUrls: ["./skills.component.scss"]
+  styleUrls: ["./skills.component.scss"],
 })
 export class SkillsComponent implements OnInit {
   public skillsList: Array<any>;
+  public languageSkillsList: Array<any>;
+
   /**
    * Creates an instance of SkillsComponent.
    *
@@ -23,6 +25,7 @@ export class SkillsComponent implements OnInit {
   constructor() {
     const baseArray = new Array();
     this.skillsList = [...baseArray, ...baseArray];
+    this.languageSkillsList = baseArray;
   }
 
   /**
@@ -33,6 +36,9 @@ export class SkillsComponent implements OnInit {
   ngOnInit() {
     this.generateSkillsList().subscribe((skills: Array<any>): void => {
       this.skillsList = skills;
+      this.generateLanguageSkills().subscribe((languages: Array<any>): void => {
+        this.languageSkillsList = languages;
+      });
     });
   }
 
@@ -59,29 +65,29 @@ export class SkillsComponent implements OnInit {
   private generateMainSkills(): Array<any> {
     return [
       {
-        id: "JavaScript/TypeScript",
-        image: "../../../assets/typescript.3.8.3.png"
+        id: "Angular",
+        image: "../../../assets/angular.png",
       },
       {
-        id: "Angular",
-        image: "../../../assets/angular.png"
+        id: "React",
+        image: "../../../assets/React-icon.png",
       },
       {
         id: "Git",
-        image: "../../../assets/git.png"
+        image: "../../../assets/git.png",
       },
       {
         id: "Jasmine",
-        image: "../../../assets/jasmine.svg"
+        image: "../../../assets/jasmine.svg",
       },
       {
         id: "Jest",
-        image: "../../../assets/jest.png"
+        image: "../../../assets/jest.png",
       },
       {
         id: "HTML/CSS",
-        image: "../../../assets/html5.png"
-      }
+        image: "../../../assets/html5.png",
+      },
     ];
   }
 
@@ -94,6 +100,7 @@ export class SkillsComponent implements OnInit {
    */
   private generateSecondarySkills(): Array<any> {
     return [
+      { id: "TypeScript" },
       { id: "Scrum" },
       { id: "MeteorJS" },
       { id: "NestJs" },
@@ -101,7 +108,25 @@ export class SkillsComponent implements OnInit {
       { id: "bootstrap" },
       { id: "bulma" },
       { id: "SCSS" },
-      { id: "MongoDB" }
+      { id: "MongoDB" },
     ];
+  }
+
+  /**
+   * Generates Language Skills Array
+   *
+   * @private
+   * @returns {Array<any>}
+   * @memberof SkillsComponent
+   */
+  private generateLanguageSkills(): Observable<Array<any>> {
+    return of(
+      new Array(
+        { id: "Portuguese", level: "Native Language" },
+        { id: "English", level: "C2, Fluent" },
+        { id: "French", level: "B2, Intermediate" },
+        { id: "German", level: "A1, Basic" }
+      )
+    );
   }
 }
