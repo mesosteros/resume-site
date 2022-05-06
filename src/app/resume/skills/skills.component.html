@@ -8,11 +8,12 @@
         <div class="skills__main_item">
           <figure class="image is-128x128 is-flex">
             <img
-              class="is-rounded"
+              [class]="coreSkill?.id === 'Jest' ? 'is-rounded' : ''"
               src="{{ coreSkill?.image }}"
               alt="{{ coreSkill?.id }}"
             />
           </figure>
+          <h1>{{ coreSkill?.id }}</h1>
         </div>
       </div>
     </div>

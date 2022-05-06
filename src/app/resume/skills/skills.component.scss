@@ -9,3 +9,31 @@
 .skills__secondary {
   margin-top: 5vh;
 }
+
+.tag {
+  font-size: 1rem;
+}
+
+.skills__main_item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  h1 {
+    padding-top: 1rem;
+    font-size: 1rem;
+    font-weight: bold;
+  }
+}
+
+.columns {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+@media screen and (max-width: 1023px) {
+  .columns {
+    flex-direction: column;
+  }
+}

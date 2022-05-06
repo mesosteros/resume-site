@@ -65,12 +65,12 @@ export class SkillsComponent implements OnInit {
   private generateMainSkills(): Array<any> {
     return [
       {
-        id: "JavaScript/TypeScript",
-        image: "../../../assets/typescript.3.8.3.png",
-      },
-      {
         id: "Angular",
         image: "../../../assets/angular.png",
+      },
+      {
+        id: "React",
+        image: "../../../assets/React-icon.png",
       },
       {
         id: "Git",
@@ -100,6 +100,7 @@ export class SkillsComponent implements OnInit {
    */
   private generateSecondarySkills(): Array<any> {
     return [
+      { id: "TypeScript" },
       { id: "Scrum" },
       { id: "MeteorJS" },
       { id: "NestJs" },
