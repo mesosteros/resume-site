@@ -76,7 +76,7 @@ export class ExperienceComponent implements OnInit {
     return [
       {
         id: "Deloitte Digital",
-        image: "../../../assets/deloitte.jpg",
+        image: "../../../assets/deloitte digital.jpg",
         longDescription: [
           "Managing Front-End Development teams.",
           "Project Acquisition and Management.",
@@ -90,7 +90,7 @@ export class ExperienceComponent implements OnInit {
       },
       {
         id: "Deloitte Digital",
-        image: "../../../assets/deloitte.jpg",
+        image: "../../../assets/deloitte digital.jpg",
         longDescription: [
           "Developed Web Applications using Angular 6/7 and NestJS.",
           "Worked on Unit Testing using Jasmine and Jest and increased test coverage above 90%.",
