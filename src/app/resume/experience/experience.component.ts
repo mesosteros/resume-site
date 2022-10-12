@@ -99,7 +99,7 @@ export class ExperienceComponent implements OnInit {
         location: "Lisbon, Portugal",
         position: "Tech Experienced Senior",
         startDate: this.formatDateForCV(2, 2022),
-        endDate: this.formatDateForCV(8, 2021),
+        endDate: this.formatDateForCV(8, 2022),
       },
       {
         id: "Affinity",
