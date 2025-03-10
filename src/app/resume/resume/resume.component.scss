@@ -18,6 +18,10 @@
     .tag {
       cursor: pointer;
       font-size: 1.5rem;
+
+      @media screen and (max-width: 767px) {
+        width: 100%;
+      }
     }
 
     .download__button {
