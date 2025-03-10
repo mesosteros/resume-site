@@ -5,20 +5,20 @@ import {
   style,
   animate,
   transition,
-  group
+  group,
 } from "@angular/animations";
+import { faGithub, faLinkedin, faDAndD } from "@fortawesome/free-brands-svg-icons";
 import {
   faBusinessTime,
   faCaretDown,
   faCaretUp,
-  faFileUser,
+  faFileContract,
   faLaptopCode,
-  faUserCircle,
+  faCircleUser,
   faUserGraduate,
-  faWrench
-} from "@fortawesome/pro-regular-svg-icons";
-import { faDiceD20, faFileCertificate } from "@fortawesome/pro-light-svg-icons";
-import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
+  faWrench,
+  faFileCircleCheck,
+} from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Nav Bar Component
@@ -28,42 +28,42 @@ import { faGithub, faLinkedin } from "@fortawesome/free-brands-svg-icons";
  * @implements {OnInit}
  */
 @Component({
-    selector: "app-nav-bar",
-    templateUrl: "./nav-bar.component.html",
-    styleUrls: ["./nav-bar.component.scss"],
-    animations: [
-        trigger("openClose", [
-            state("in", style({ "max-height": "*", opacity: 0 })),
-            transition(":leave", [
-                style({ height: "*", opacity: 1 }),
-                group([
-                    animate(400, style({ height: 0 })),
-                    animate("400ms ease-in-out", style({ opacity: 0 }))
-                ])
-            ]),
-            transition(":enter", [
-                style({ height: 0, opacity: 0 }),
-                group([
-                    animate(400, style({ height: "*" })),
-                    animate("400ms ease-in-out", style({ opacity: 1 }))
-                ])
-            ])
-        ])
-    ],
-    standalone: false
+  selector: "app-nav-bar",
+  templateUrl: "./nav-bar.component.html",
+  styleUrls: ["./nav-bar.component.scss"],
+  animations: [
+    trigger("openClose", [
+      state("in", style({ "max-height": "*", opacity: 0 })),
+      transition(":leave", [
+        style({ height: "*", opacity: 1 }),
+        group([
+          animate(400, style({ height: 0 })),
+          animate("400ms ease-in-out", style({ opacity: 0 })),
+        ]),
+      ]),
+      transition(":enter", [
+        style({ height: 0, opacity: 0 }),
+        group([
+          animate(400, style({ height: "*" })),
+          animate("400ms ease-in-out", style({ opacity: 1 })),
+        ]),
+      ]),
+    ]),
+  ],
+  standalone: false,
 })
 export class NavBarComponent implements OnInit {
   resumeSectionExpanded: boolean;
   faBusinessTime = faBusinessTime;
   faCaretDown = faCaretDown;
   faCaretUp = faCaretUp;
-  faFileUser = faFileUser;
+  faFileUser = faFileContract;
   faLaptopCode = faLaptopCode;
-  faUserCircle = faUserCircle;
+  faUserCircle = faCircleUser;
   faUserGraduate = faUserGraduate;
   faWrench = faWrench;
-  faDiceD20 = faDiceD20;
-  faFileCertificate = faFileCertificate;
+  faDiceD20 = faDAndD;
+  faFileCertificate = faFileCircleCheck;
   faGithub = faGithub;
   faLinkedin = faLinkedin;
 

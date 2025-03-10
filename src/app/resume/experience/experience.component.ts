@@ -1,6 +1,6 @@
 import { Component, OnInit } from "@angular/core";
 import { Observable, of } from "rxjs";
-import { faArrowAltCircleLeft } from "@fortawesome/pro-regular-svg-icons";
+import { faCircleLeft } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Experience Component
@@ -10,13 +10,13 @@ import { faArrowAltCircleLeft } from "@fortawesome/pro-regular-svg-icons";
  * @implements {OnInit}
  */
 @Component({
-    selector: "app-experience",
-    templateUrl: "./experience.component.html",
-    styleUrls: ["./experience.component.scss"],
-    standalone: false
+  selector: "app-experience",
+  templateUrl: "./experience.component.html",
+  styleUrls: ["./experience.component.scss"],
+  standalone: false,
 })
 export class ExperienceComponent implements OnInit {
-  faArrowAltCircleLeft = faArrowAltCircleLeft;
+  faArrowAltCircleLeft = faCircleLeft;
   public experienceHistory: Array<any>;
   public months = [
     "Jan.",
