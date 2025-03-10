@@ -1,5 +1,9 @@
-html, body, #app
-{
+html,
+body,
+#app {
   height: 100vh !important;
-  overflow: hidden !important;
+
+  @media screen and (max-width: 1439px) {
+    overflow: hidden !important;
+  }
 }
