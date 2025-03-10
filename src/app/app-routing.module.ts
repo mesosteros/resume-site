@@ -6,26 +6,22 @@ import { WelcomeComponent } from "./welcome/welcome.component";
 const routes: Routes = [
   {
     path: "",
-    component: WelcomeComponent
-  },
-  {
-    path: "about",
-    loadChildren: () => import("./about/about.module").then(m => m.AboutModule)
+    component: WelcomeComponent,
   },
   {
     path: "hobbies",
     loadChildren: () =>
-      import("./hobbies/hobbies.module").then(m => m.HobbiesModule)
+      import("./hobbies/hobbies.module").then((m) => m.HobbiesModule),
   },
   {
     path: "resume",
     loadChildren: () =>
-      import("./resume/resume.module").then(m => m.ResumeModule)
+      import("./resume/resume.module").then((m) => m.ResumeModule),
   },
   {
     path: "**",
-    component: ContentComponent
-  }
+    component: ContentComponent,
+  },
 ];
 
 /**
@@ -36,6 +32,6 @@ const routes: Routes = [
  */
 @NgModule({
   imports: [RouterModule.forRoot(routes, {})],
-  exports: [RouterModule]
+  exports: [RouterModule],
 })
 export class AppRoutingModule {}

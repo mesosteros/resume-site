@@ -7,6 +7,7 @@ import { AppComponent } from "./app.component";
 import { ContentComponent } from "./content/content.component";
 import { NavBarComponent } from "./nav-bar/nav-bar.component";
 import { WelcomeComponent } from "./welcome/welcome.component";
+import { AboutComponent } from "./about/about.component";
 
 /**
  * App Base Module
@@ -19,16 +20,17 @@ import { WelcomeComponent } from "./welcome/welcome.component";
     AppComponent,
     NavBarComponent,
     ContentComponent,
-    WelcomeComponent
+    WelcomeComponent,
+    AboutComponent,
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     AppRoutingModule,
-    FontAwesomeModule
+    FontAwesomeModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
 export class AppModule {
   /**

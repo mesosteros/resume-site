@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 /**
  * About Component
@@ -8,24 +8,23 @@ import { Component, OnInit } from '@angular/core';
  * @implements {OnInit}
  */
 @Component({
-    selector: 'app-about',
-    templateUrl: './about.component.html',
-    styleUrls: ['./about.component.scss'],
-    standalone: false
+  selector: "app-about",
+  templateUrl: "./about.component.html",
+  styleUrls: ["./about.component.scss"],
+  standalone: false,
 })
 export class AboutComponent implements OnInit {
   /**
    * Creates an instance of AboutComponent.
-   * 
+   *
    * @memberof AboutComponent
    */
-  constructor() { }
+  constructor() {}
 
   /**
    * Lifecycle hook
    *
    * @memberof AboutComponent
    */
-  ngOnInit() {
-  }
+  ngOnInit() {}
 }
