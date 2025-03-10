@@ -112,7 +112,9 @@ h1 {
 @media screen and (min-width: 1980px) {
   .menu {
     .menu-list {
-      padding-left: 2.5em;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
 
       li {
         width: 14em;

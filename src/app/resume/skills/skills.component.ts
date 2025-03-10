@@ -9,10 +9,10 @@ import { Observable, of } from "rxjs";
  * @implements {OnInit}
  */
 @Component({
-    selector: "app-skills",
-    templateUrl: "./skills.component.html",
-    styleUrls: ["./skills.component.scss"],
-    standalone: false
+  selector: "app-skills",
+  templateUrl: "./skills.component.html",
+  styleUrls: ["./skills.component.scss"],
+  standalone: false,
 })
 export class SkillsComponent implements OnInit {
   public skillsList: Array<any>;
@@ -82,8 +82,8 @@ export class SkillsComponent implements OnInit {
         image: "../../../assets/jasmine.svg",
       },
       {
-        id: "Jest",
-        image: "../../../assets/jest.png",
+        id: "Contentful",
+        image: "../../../assets/contentful.png",
       },
       {
         id: "HTML/CSS",
@@ -101,15 +101,11 @@ export class SkillsComponent implements OnInit {
    */
   private generateSecondarySkills(): Array<any> {
     return [
-      { id: "TypeScript" },
+      { id: "Management" },
+      { id: "Communication" },
+      { id: "Empathy" },
+      { id: "Critical Thinking" },
       { id: "Scrum" },
-      { id: "MeteorJS" },
-      { id: "NestJs" },
-      { id: "angularJs" },
-      { id: "bootstrap" },
-      { id: "bulma" },
-      { id: "SCSS" },
-      { id: "MongoDB" },
     ];
   }
 

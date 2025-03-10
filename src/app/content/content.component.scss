@@ -1,5 +1,5 @@
 .hero.is-fullheight {
-  height: 102vh;
+  height: 100%;
   overflow-y: auto;
 }
 
@@ -7,6 +7,7 @@
   .hero-body {
     padding-top: 0;
     padding-bottom: 0;
+    margin: -12px;
   }
   .container {
     height: 80vh;

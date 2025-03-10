@@ -5,75 +5,47 @@
         <h1 class="menu-label is-hidden-mobile is-size-3">Carlos Santos</h1>
       </a>
       <ul class="menu-list is-size-5">
-        <li class="menu__parent">
-          <a
-            class="menu__item_expandable menu__parent_item"
-            [ngClass]="{ 'is-active': resumeSectionExpanded }"
-            [routerLink]="['resume']"
-            (click)="clickResumeSection($event)"
-          >
+        <li class="longer-child-item">
+          <a [routerLink]="['resume/experience']">
             <span class="icon">
-              <fa-icon [icon]="faFileUser"></fa-icon>
+              <fa-icon [icon]="faBusinessTime"></fa-icon>
             </span>
-            Resume
-            <span class="icon">
-              <fa-icon
-                [icon]="faCaretDown"
-                *ngIf="!resumeSectionExpanded"
-              ></fa-icon>
-              <fa-icon
-                [icon]="faCaretUp"
-                *ngIf="resumeSectionExpanded"
-              ></fa-icon>
-            </span>
+            Professional experience
           </a>
-          <ul
-            [@openClose]="resumeSectionExpanded ? 'open' : 'closed'"
-            *ngIf="resumeSectionExpanded"
-          >
-            <li>
-              <a [routerLink]="['resume/skills']">
-                <span class="icon">
-                  <fa-icon [icon]="faWrench"></fa-icon>
-                </span>
-                Skills
-              </a>
-            </li>
-            <li class="longer-child-item">
-              <a [routerLink]="['resume/experience']">
-                <span class="icon">
-                  <fa-icon [icon]="faBusinessTime"></fa-icon>
-                </span>
-                Professional experience
-              </a>
-            </li>
-            <li>
-              <a [routerLink]="['resume/education']">
-                <span class="icon">
-                  <fa-icon [icon]="faUserGraduate"></fa-icon>
-                </span>
-                Education
-              </a>
-            </li>
-            <li>
-              <a [routerLink]="['resume/certifications']">
-                <span class="icon">
-                  <fa-icon [icon]="faFileCertificate"></fa-icon>
-                </span>
-                Certifications
-              </a>
-            </li>
-            <li>
-              <a [routerLink]="['resume/training']">
-                <span class="icon">
-                  <fa-icon [icon]="faLaptopCode"></fa-icon>
-                </span>
-                Training
-              </a>
-            </li>
-          </ul>
         </li>
-        <li class="menu__parent">
+        <li>
+          <a [routerLink]="['resume/education']">
+            <span class="icon">
+              <fa-icon [icon]="faUserGraduate"></fa-icon>
+            </span>
+            Education
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['resume/skills']">
+            <span class="icon">
+              <fa-icon [icon]="faWrench"></fa-icon>
+            </span>
+            Skills
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['resume/certifications']">
+            <span class="icon">
+              <fa-icon [icon]="faFileCertificate"></fa-icon>
+            </span>
+            Certifications
+          </a>
+        </li>
+        <li>
+          <a [routerLink]="['resume/training']">
+            <span class="icon">
+              <fa-icon [icon]="faLaptopCode"></fa-icon>
+            </span>
+            Training
+          </a>
+        </li>
+        <li>
           <a [routerLink]="['hobbies']" class="menu__parent_item">
             <span class="icon">
               <fa-icon [icon]="faDiceD20"></fa-icon>
