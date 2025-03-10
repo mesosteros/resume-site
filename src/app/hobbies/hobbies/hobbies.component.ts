@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
  * @implements {OnInit}
  */
 @Component({
-  selector: 'app-hobbies',
-  templateUrl: './hobbies.component.html',
-  styleUrls: ['./hobbies.component.scss']
+    selector: 'app-hobbies',
+    templateUrl: './hobbies.component.html',
+    styleUrls: ['./hobbies.component.scss'],
+    standalone: false
 })
 export class HobbiesComponent implements OnInit {
   /**

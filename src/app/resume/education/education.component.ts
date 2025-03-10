@@ -9,9 +9,10 @@ import { Observable, of } from "rxjs";
  * @implements {OnInit}
  */
 @Component({
-  selector: "app-education",
-  templateUrl: "./education.component.html",
-  styleUrls: ["./education.component.scss"],
+    selector: "app-education",
+    templateUrl: "./education.component.html",
+    styleUrls: ["./education.component.scss"],
+    standalone: false
 })
 export class EducationComponent implements OnInit {
   public educationHistory: Array<any>;

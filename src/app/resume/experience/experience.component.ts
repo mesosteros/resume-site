@@ -10,9 +10,10 @@ import { faArrowAltCircleLeft } from "@fortawesome/pro-regular-svg-icons";
  * @implements {OnInit}
  */
 @Component({
-  selector: "app-experience",
-  templateUrl: "./experience.component.html",
-  styleUrls: ["./experience.component.scss"],
+    selector: "app-experience",
+    templateUrl: "./experience.component.html",
+    styleUrls: ["./experience.component.scss"],
+    standalone: false
 })
 export class ExperienceComponent implements OnInit {
   faArrowAltCircleLeft = faArrowAltCircleLeft;

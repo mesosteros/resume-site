@@ -8,9 +8,10 @@ import { Component, OnInit } from '@angular/core';
  * @implements {OnInit}
  */
 @Component({
-  selector: 'app-certifications',
-  templateUrl: './certifications.component.html',
-  styleUrls: ['./certifications.component.scss']
+    selector: 'app-certifications',
+    templateUrl: './certifications.component.html',
+    styleUrls: ['./certifications.component.scss'],
+    standalone: false
 })
 export class CertificationsComponent implements OnInit {
   /**
