@@ -1,5 +1,42 @@
-html, body, #app
-{
-  height: 100vh !important;
-  overflow: hidden !important;
+@use "@angular/material" as mat;
+
+@include mat.elevation-classes();
+@include mat.app-background();
+
+html,
+body {
+  height: 100%;
 }
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Noto Sans", sans-serif;
+}
+
+$theme: mat.define-theme(
+  (
+    color: (
+      theme-type: dark,
+      primary: mat.$azure-palette,
+    ),
+    typography: (
+      brand-family: "Noto Sans",
+      bold-weight: 900,
+    ),
+    density: (
+      scale: -1,
+    ),
+  )
+);
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }

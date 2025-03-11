@@ -1,11 +1,22 @@
-<div id="app">
-  <div class="columns has-background-dark">
-    <div
-      class="column__left column is-one-third-tablet is-one-third-desktop is-one-fifth-widescreen">
-      <app-nav-bar></app-nav-bar>
-    </div>
-    <div class="column__right column">
-      <app-content></app-content>
-    </div>
-  </div>
+@if(hideSideMenu){
+<div class="app-container">
+  <app-header />
+  <main class="content">
+    <router-outlet />
+  </main>
+  <app-footer />
 </div>
+} @else {
+<mat-drawer-container class="mobile-sidenav-container" autosize>
+  <mat-drawer #drawer class="mobile-sidenav" mode="side">
+    <app-navigation [hideSideMenu]="hideSideMenu"></app-navigation>
+  </mat-drawer>
+  <button type="button" mat-button (click)="drawer.toggle()">
+    <mat-icon aria-hidden="false" aria-label="Menu" fontIcon="menu"></mat-icon>
+  </button>
+  <main class="main content">
+    <router-outlet />
+  </main>
+  <app-footer />
+</mat-drawer-container>
+}
