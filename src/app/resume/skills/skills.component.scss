@@ -1,3 +1,22 @@
+h1 {
+  font-size: 2rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: bold;
+  padding-bottom: 1rem;
+  text-align: center;
+}
+
+p {
+  font-size: 1.3rem;
+  padding-bottom: 0.5rem;
+}
+
 .skills {
   content-visibility: auto;
 }
@@ -20,9 +39,7 @@
   align-items: center;
   flex-direction: column;
 
-  h1 {
-    padding-top: 1rem;
-    font-size: 1rem;
+  h2 {
     font-weight: bold;
   }
 }

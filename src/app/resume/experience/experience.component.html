@@ -1,5 +1,7 @@
 <section class="section">
   <div class="experiences container">
+    <h1>Professional Experience</h1>
+    <br />
     <div class="columns experiences__column">
       <div class="column is-4" *ngFor="let experience of experienceHistory">
         <div class="experiences__item">
@@ -11,7 +13,7 @@
                 alt="{{ experience?.id }}"
               />
             </figure>
-            <h1 class="experiences__item_title">{{ experience?.id }}</h1>
+            <h2 class="experiences__item_title">{{ experience?.id }}</h2>
           </div>
           <h2 class="experiences__item_position">{{ experience?.position }}</h2>
           <h3 class="experiences__item_details">

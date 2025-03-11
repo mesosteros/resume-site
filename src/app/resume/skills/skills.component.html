@@ -1,5 +1,7 @@
 <section class="section">
   <div class="skills container">
+    <h1>Skills</h1>
+    <br />
     <div class="skills__main columns">
       <div
         class="column is-2 is-centered"
@@ -8,12 +10,13 @@
         <div class="skills__main_item">
           <figure class="image is-128x128 is-flex">
             <img
-              [class]="coreSkill?.id === 'Jest' ? 'is-rounded' : ''"
+              [class]="coreSkill?.id === 'Contentful' ? 'is-rounded' : ''"
               src="{{ coreSkill?.image }}"
               alt="{{ coreSkill?.id }}"
             />
           </figure>
-          <h1>{{ coreSkill?.id }}</h1>
+          <br />
+          <h2>{{ coreSkill?.id }}</h2>
         </div>
       </div>
     </div>
