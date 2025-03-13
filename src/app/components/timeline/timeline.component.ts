@@ -1,4 +1,4 @@
-import { CommonModule } from '@angular/common';
+import { CommonModule, NgOptimizedImage } from '@angular/common';
 import { Component, Input, OnInit } from '@angular/core';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import {
@@ -11,7 +11,7 @@ import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-timeline',
-  imports: [CommonModule, NgxTimelineModule],
+  imports: [CommonModule, NgxTimelineModule, NgOptimizedImage],
   templateUrl: './timeline.component.html',
   styleUrl: './timeline.component.scss',
 })

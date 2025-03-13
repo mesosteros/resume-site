@@ -11,10 +11,6 @@ import { LoadingService } from '../../shared/loading/loading.service';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { SeoService } from '../../shared/seo/seo.service';
-import { Meta } from '@angular/platform-browser';
-import { environment } from '../../../environments/environment';
-
-const canonicalUrl = `${environment.hostUrl}/professional`;
 
 @Component({
   selector: 'app-professional',
@@ -119,21 +115,5 @@ export class ProfessionalComponent implements OnInit, AfterViewInit {
 
   convertToHtml(text: any) {
     return documentToHtmlString(text);
-  }
-
-  private async getImage(wrapperId: string) {
-    this.loadingService.show();
-
-    return this.contentfulService
-      .getEntry(wrapperId)
-      .then((experienceImage: any) => {
-        this.loadingService.hide();
-        this.isLoading = false;
-        return {
-          altText: experienceImage.fields.altText,
-          url: experienceImage.fields.asset.fields.file.url,
-        };
-      })
-      .catch((error) => console.error('Error loading image: ', error));
   }
 }

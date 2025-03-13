@@ -11,9 +11,6 @@ import { LoadingService } from '../../shared/loading/loading.service';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { SeoService } from '../../shared/seo/seo.service';
-import { environment } from '../../../environments/environment';
-
-const canonicalUrl = `${environment.hostUrl}/education`;
 
 @Component({
   selector: 'app-education',

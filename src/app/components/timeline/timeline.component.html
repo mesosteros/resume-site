@@ -25,10 +25,11 @@
   <div class="experience-logo-container">
     <img
       class="experience-logo-image"
-      width="60px"
-      height="60px"
-      src="{{ event.eventInfo?.description?.image?.url }}"
+      width="96"
+      height="96"
+      ngSrc="{{ event.eventInfo?.description?.image?.url }}"
       alt="{{ event.eventInfo?.description?.image?.altText }}"
+      priority
     />
   </div>
   <div
