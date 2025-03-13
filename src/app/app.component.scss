@@ -23,13 +23,17 @@ footer {
   &-wrapper {
     display: flex;
     justify-content: flex-end;
+    width: 100%;
+    position: fixed;
   }
 }
 
 .mobile-content-wrapper {
   display: grid;
-  grid-template-columns: auto 1fr; /* Button auto, content takes remaining */
-  align-items: start; /*align items to the start*/
+  grid-template-columns: auto 1fr;
+  align-items: start;
+  width: 100%;
+  position: fixed;
 }
 
 .main {
@@ -63,4 +67,5 @@ footer {
 app-navigation {
   display: flex !important;
   justify-content: center !important;
+  overflow: hidden;
 }
