@@ -19,6 +19,17 @@ footer {
   &-container {
     min-height: 100%;
   }
+
+  &-wrapper {
+    display: flex;
+    justify-content: flex-end;
+  }
+}
+
+.mobile-content-wrapper {
+  display: grid;
+  grid-template-columns: auto 1fr; /* Button auto, content takes remaining */
+  align-items: start; /*align items to the start*/
 }
 
 .main {
@@ -38,4 +49,13 @@ footer {
   @media screen and (max-width: 767px) {
     padding-top: 1rem;
   }
+}
+
+.hamburger {
+  margin: 0 !important;
+  z-index: 100;
+}
+
+.mat-drawer.mat-drawer-opened.mat-drawer-opened {
+  width: 100% !important;
 }

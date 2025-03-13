@@ -9,11 +9,28 @@
 } @else {
 <mat-drawer-container class="mobile-sidenav-container" autosize>
   <mat-drawer #drawer class="mobile-sidenav" mode="side">
+    <div class="mobile-sidenav-wrapper">
+      <button type="button" mat-button (click)="drawer.toggle()">
+        <mat-icon
+          class="hamburger"
+          aria-hidden="false"
+          aria-label="Menu"
+          fontIcon="menu"
+        ></mat-icon>
+      </button>
+    </div>
     <app-navigation [hideSideMenu]="hideSideMenu"></app-navigation>
   </mat-drawer>
-  <button type="button" mat-button (click)="drawer.toggle()">
-    <mat-icon aria-hidden="false" aria-label="Menu" fontIcon="menu"></mat-icon>
-  </button>
+  <div class="mobile-content-wrapper">
+    <button type="button" mat-button (click)="drawer.toggle()">
+      <mat-icon
+        class="hamburger"
+        aria-hidden="false"
+        aria-label="Menu"
+        fontIcon="menu"
+      ></mat-icon>
+    </button>
+  </div>
   <main class="main content">
     <router-outlet />
   </main>
