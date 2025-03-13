@@ -19,7 +19,10 @@
         ></mat-icon>
       </button>
     </div>
-    <app-navigation [hideSideMenu]="hideSideMenu"></app-navigation>
+    <app-navigation
+      [hideSideMenu]="hideSideMenu"
+      (linkClicked)="toggleSideMenu()"
+    ></app-navigation>
   </mat-drawer>
   <div class="mobile-content-wrapper">
     <button type="button" mat-button (click)="drawer.toggle()">
