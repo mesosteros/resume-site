@@ -1,6 +1,12 @@
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Inject,
+  OnInit,
+  effect,
+  signal,
+} from '@angular/core';
 import { ContentfulService } from '../../shared/contentful/contentful.service';
-import { LoadingService } from '../../shared/loading/loading.service';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { FontAwesomeModule } from '@fortawesome/angular-fontawesome';
@@ -13,14 +19,11 @@ import {
   faBook,
 } from '@fortawesome/free-solid-svg-icons';
 import { SeoService } from '../../shared/seo/seo.service';
-import { environment } from '../../../environments/environment';
-
-const canonicalUrl = `${environment.hostUrl}/hobbies`;
 
 @Component({
   selector: 'app-hobbies',
   imports: [CommonModule, LoadingSpinnerComponent, FontAwesomeModule],
-  providers: [ContentfulService, LoadingService, SeoService],
+  providers: [ContentfulService, SeoService],
   templateUrl: './hobbies.component.html',
   styleUrl: './hobbies.component.scss',
 })
@@ -32,17 +35,33 @@ export class HobbiesComponent implements OnInit, AfterViewInit {
   public faCameraRetro = faCameraRetro;
   public faFilm = faFilm;
   public hobbiesData: any = [];
+  public loading = signal(false);
+  public error = signal(false);
 
   constructor(
-    private loadingService: LoadingService,
     @Inject(DOCUMENT) private document: Document,
     private seoService: SeoService,
     private contentfulService: ContentfulService
-  ) {}
+  ) {
+    effect(() => {
+      if (this.error()) {
+        console.error('Contentful error');
+      }
+    });
+  }
 
   ngOnInit() {
-    this.loadingService.show();
+    this.fetchContent();
+  }
 
+  ngAfterViewInit(): void {
+    this.seoService.updateTitleServer('Hobbies');
+    this.seoService.setCanonicalURL(this.document.URL);
+  }
+
+  private fetchContent() {
+    this.loading.set(true);
+    this.error.set(false);
     this.contentfulService
       .getEntries('hobbies')
       .then((entries: any) => {
@@ -56,16 +75,13 @@ export class HobbiesComponent implements OnInit, AfterViewInit {
             return hobbyObj;
           });
       })
-      .catch((error) => (this.hobbiesData = []))
+      .catch((error) => {
+        this.hobbiesData = [];
+        this.error.set(true);
+      })
       .finally(() => {
-        this.loadingService.hide();
-        this.isLoading = false;
+        this.loading.set(false);
       });
-  }
-
-  ngAfterViewInit(): void {
-    this.seoService.updateTitleServer('Hobbies');
-    this.seoService.setCanonicalURL(this.document.URL);
   }
 
   private getMatchingIcon(hobbyName: string) {

@@ -1,5 +1,12 @@
 import { CommonModule, DOCUMENT } from '@angular/common';
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Inject,
+  OnInit,
+  effect,
+  signal,
+} from '@angular/core';
 import { documentToHtmlString } from '@contentful/rich-text-html-renderer';
 import {
   NgxDateFormat,
@@ -7,7 +14,6 @@ import {
   NgxTimelineEventChangeSide,
 } from '@frxjs/ngx-timeline';
 import { ContentfulService } from '../../shared/contentful/contentful.service';
-import { LoadingService } from '../../shared/loading/loading.service';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 import { TimelineComponent } from '../timeline/timeline.component';
 import { SeoService } from '../../shared/seo/seo.service';
@@ -20,7 +26,8 @@ import { SeoService } from '../../shared/seo/seo.service';
   styleUrl: './professional.component.scss',
 })
 export class ProfessionalComponent implements OnInit, AfterViewInit {
-  public isLoading: boolean = true;
+  public loading = signal(false);
+  public error = signal(false);
   public professionalData: any;
   public events: NgxTimelineEvent[] = [];
   public timelineSide: NgxTimelineEventChangeSide =
@@ -30,13 +37,27 @@ export class ProfessionalComponent implements OnInit, AfterViewInit {
   constructor(
     @Inject(DOCUMENT) private document: Document,
     private seoService: SeoService,
-    private contentfulService: ContentfulService,
-    private loadingService: LoadingService
-  ) {}
+    private contentfulService: ContentfulService
+  ) {
+    effect(() => {
+      if (this.error()) {
+        console.error('Contentful error');
+      }
+    });
+  }
 
   ngOnInit() {
-    this.loadingService.show();
+    this.fetchContent();
+  }
 
+  ngAfterViewInit(): void {
+    this.seoService.updateTitleServer('Experience');
+    this.seoService.setCanonicalURL(this.document.URL);
+  }
+
+  private fetchContent() {
+    this.loading.set(true);
+    this.error.set(false);
     this.contentfulService
       .getEntries('landingPage')
       .then((data: any) => {
@@ -84,18 +105,14 @@ export class ProfessionalComponent implements OnInit, AfterViewInit {
         );
         this.events = events;
       })
-      .catch((error) => (this.professionalData = []))
+      .catch((error) => {
+        this.professionalData = [];
+        this.error.set(true);
+      })
       .finally(() => {
-        this.loadingService.hide();
-        this.isLoading = false;
+        this.loading.set(false);
       });
   }
-
-  ngAfterViewInit(): void {
-    this.seoService.updateTitleServer('Experience');
-    this.seoService.setCanonicalURL(this.document.URL);
-  }
-
   handleClick(event: any) {
     return;
   }

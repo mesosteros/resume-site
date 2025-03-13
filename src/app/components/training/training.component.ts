@@ -1,7 +1,13 @@
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Inject,
+  OnInit,
+  effect,
+  signal,
+} from '@angular/core';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 import { ContentfulService } from '../../shared/contentful/contentful.service';
-import { LoadingService } from '../../shared/loading/loading.service';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { SeoService } from '../../shared/seo/seo.service';
 
@@ -13,19 +19,34 @@ import { SeoService } from '../../shared/seo/seo.service';
   styleUrl: './training.component.scss',
 })
 export class TrainingComponent implements OnInit, AfterViewInit {
-  public isLoading: boolean = true;
   public trainingData: any = [];
+  public loading = signal(false);
+  public error = signal(false);
 
   constructor(
-    private loadingService: LoadingService,
     @Inject(DOCUMENT) private document: Document,
     private seoService: SeoService,
     private contentfulService: ContentfulService
-  ) {}
+  ) {
+    effect(() => {
+      if (this.error()) {
+        console.error('Contentful error');
+      }
+    });
+  }
 
   ngOnInit() {
-    this.loadingService.show();
+    this.fetchContent();
+  }
 
+  ngAfterViewInit(): void {
+    this.seoService.updateTitleServer('Training and Certifications');
+    this.seoService.setCanonicalURL(this.document.URL);
+  }
+
+  private fetchContent() {
+    this.loading.set(true);
+    this.error.set(false);
     this.contentfulService
       .getEntries('training')
       .then((entries: any) => {
@@ -35,15 +56,12 @@ export class TrainingComponent implements OnInit, AfterViewInit {
             trainingA.trainingGroup.localeCompare(trainingB.trainingGroup)
           );
       })
-      .catch((error) => (this.trainingData = []))
+      .catch((error) => {
+        this.trainingData = [];
+        this.error.set(true);
+      })
       .finally(() => {
-        this.loadingService.hide();
-        this.isLoading = false;
+        this.loading.set(false);
       });
-  }
-
-  ngAfterViewInit(): void {
-    this.seoService.updateTitleServer('Training and Certifications');
-    this.seoService.setCanonicalURL(this.document.URL);
   }
 }

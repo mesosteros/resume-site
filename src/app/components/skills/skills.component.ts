@@ -1,15 +1,18 @@
-import { AfterViewInit, Component, Inject, OnInit } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  Inject,
+  OnInit,
+  effect,
+  signal,
+} from '@angular/core';
 import { CommonModule, DOCUMENT } from '@angular/common';
 import { TechnicalSkillsComponent } from '../technical-skills/technical-skills.component';
 import { SoftSkillsComponent } from '../soft-skills/soft-skills.component';
 import { LanguageSkillsComponent } from '../language-skills/language-skills.component';
 import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
-import { LoadingService } from '../../shared/loading/loading.service';
 import { ContentfulService } from '../../shared/contentful/contentful.service';
 import { SeoService } from '../../shared/seo/seo.service';
-import { environment } from '../../../environments/environment';
-
-const canonicalUrl = `${environment.hostUrl}/skills`;
 
 @Component({
   selector: 'app-skills',
@@ -26,20 +29,26 @@ const canonicalUrl = `${environment.hostUrl}/skills`;
 })
 export class SkillsComponent implements OnInit, AfterViewInit {
   loadedData = 0;
-  public isLoading: boolean = true;
+  public loading = signal(false);
+  public error = signal(false);
   public techSkillsData: any = [];
   public languageSkillsData: any = [];
   public softSkillsData: any = [];
 
   constructor(
-    private loadingService: LoadingService,
     @Inject(DOCUMENT) private document: Document,
     private seoService: SeoService,
     private contentfulService: ContentfulService
-  ) {}
+  ) {
+    effect(() => {
+      if (this.error()) {
+        console.error('Contentful error');
+      }
+    });
+  }
 
   ngOnInit() {
-    this.fetchData();
+    this.fetchContent();
   }
 
   ngAfterViewInit(): void {
@@ -47,8 +56,9 @@ export class SkillsComponent implements OnInit, AfterViewInit {
     this.seoService.setCanonicalURL(this.document.URL);
   }
 
-  private async fetchData() {
-    this.loadingService.show();
+  private async fetchContent() {
+    this.loading.set(true);
+    this.error.set(false);
     try {
       const [techData, langData, softData] = await Promise.all([
         this.contentfulService.getEntries('skills'),
@@ -60,9 +70,9 @@ export class SkillsComponent implements OnInit, AfterViewInit {
       this.getSoftSkills(softData);
     } catch (error) {
       console.error('Error: ', error);
+      this.error.set(true);
     } finally {
-      this.loadingService.hide();
-      this.isLoading = false;
+      this.loading.set(false);
     }
   }
 
