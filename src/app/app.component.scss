@@ -59,3 +59,8 @@ footer {
 .mat-drawer.mat-drawer-opened.mat-drawer-opened {
   width: 100% !important;
 }
+
+app-navigation {
+  display: flex !important;
+  justify-content: center !important;
+}
