@@ -19,6 +19,10 @@ import {
   faBook,
 } from '@fortawesome/free-solid-svg-icons';
 import { SeoService } from '../../shared/seo/seo.service';
+import { Meta } from '@angular/platform-browser';
+import { environment } from '../../../environments/environment';
+
+const canonicalUrl = `${environment.hostUrl}/hobbies`;
 
 @Component({
   selector: 'app-hobbies',

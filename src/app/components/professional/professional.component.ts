@@ -14,9 +14,9 @@ import {
   NgxTimelineEventChangeSide,
 } from '@frxjs/ngx-timeline';
 import { ContentfulService } from '../../shared/contentful/contentful.service';
-import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
-import { TimelineComponent } from '../../shared/timeline/timeline.component';
 import { SeoService } from '../../shared/seo/seo.service';
+import { TimelineComponent } from '../../shared/timeline/timeline.component';
+import { LoadingSpinnerComponent } from '../loading-spinner/loading-spinner.component';
 
 @Component({
   selector: 'app-professional',
@@ -113,6 +113,7 @@ export class ProfessionalComponent implements OnInit, AfterViewInit {
         this.loading.set(false);
       });
   }
+  
   handleClick(event: any) {
     return;
   }

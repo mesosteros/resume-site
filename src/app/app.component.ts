@@ -38,7 +38,7 @@ export class AppComponent implements OnInit, OnDestroy {
   hideSideMenu = true;
   private renderer = inject(Renderer2);
   private rendererFactory = inject(RendererFactory2);
-  @ViewChild('drawer') drawer!: MatDrawer; // Add ViewChild
+  @ViewChild('drawer') drawer!: MatDrawer;
 
   constructor(private responsive: BreakpointObserver) {
     afterNextRender(() => {

@@ -28,7 +28,6 @@ import { SeoService } from '../../shared/seo/seo.service';
   styleUrl: './skills.component.scss',
 })
 export class SkillsComponent implements OnInit, AfterViewInit {
-  loadedData = 0;
   public loading = signal(false);
   public error = signal(false);
   public techSkillsData: any = [];
